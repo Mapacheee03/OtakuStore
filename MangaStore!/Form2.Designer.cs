@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             btnCerrarForm = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnCerrarForm
             // 
-            btnCerrarForm.Location = new Point(10, 12);
+            btnCerrarForm.BackColor = Color.FromArgb(32, 30, 45);
+            btnCerrarForm.FlatAppearance.BorderSize = 0;
+            btnCerrarForm.FlatStyle = FlatStyle.Flat;
+            btnCerrarForm.ForeColor = SystemColors.ControlLightLight;
+            btnCerrarForm.Image = (Image)resources.GetObject("btnCerrarForm.Image");
+            btnCerrarForm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarForm.Location = new Point(12, 12);
             btnCerrarForm.Name = "btnCerrarForm";
-            btnCerrarForm.Size = new Size(75, 23);
-            btnCerrarForm.TabIndex = 9;
-            btnCerrarForm.Text = "X";
-            btnCerrarForm.UseVisualStyleBackColor = true;
+            btnCerrarForm.Size = new Size(62, 52);
+            btnCerrarForm.TabIndex = 10;
+            btnCerrarForm.UseVisualStyleBackColor = false;
             btnCerrarForm.Click += btnCerrarForm_Click;
             // 
             // button3
@@ -86,6 +93,15 @@
             dataGridView1.Size = new Size(406, 443);
             dataGridView1.TabIndex = 5;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(549, 609);
+            panel1.TabIndex = 10;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -96,6 +112,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             Text = "Form2";
@@ -110,5 +127,6 @@
         private Button button2;
         private Button button1;
         private DataGridView dataGridView1;
+        private Panel panel1;
     }
 }

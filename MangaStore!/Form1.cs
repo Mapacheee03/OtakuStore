@@ -1,4 +1,4 @@
-namespace MangaStore_
+﻿namespace MangaStore_
 {
     public partial class panelSideMenu : Form
     {
@@ -29,32 +29,6 @@ namespace MangaStore_
             else
                 subMenu.Visible = false;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form2());
-            hideSubMenu();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnManga_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMangaSubMenu);
@@ -64,48 +38,80 @@ namespace MangaStore_
         {
             showSubMenu(panelAnimesSubMenu);
         }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form3());
-            hideSubMenu();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
+            childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
+        }
+
+
+        private void btnShōnen_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form2());
+            hideSubMenu();
+        }
+
+        private void btnShōjo_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Form3());
+            hideSubMenu();
+
+        }
+
+        private void btnSeinen_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+
+        }
+        private void btnKodomo_Click(object sender, EventArgs e)
+        {
+
+            openChildForm(new());
+            hideSubMenu();
+
+        }
+
+        private void btnAcción_Click(object sender, EventArgs e)
+        {
+
+            hideSubMenu();
+        }
+
+        private void btnMedievalFantasy_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnRomance_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnTerror_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnDrama_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+        private void btnCreadores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Creadores());
+        }
+        c
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

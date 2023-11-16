@@ -10,18 +10,26 @@ using System.Windows.Forms;
 
 namespace MangaStore_
 {
-    public partial class Form3 : Form
+    public partial class Creadores : Form
     {
-        public Form3()
+        public Creadores()
         {
             InitializeComponent();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
