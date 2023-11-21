@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCreadores.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxAFJy+Xg6rDAAAB+UlEQVRIS+WUsUuVURiHryAtDtpQ
@@ -133,7 +133,7 @@
         a5XLbQNuZ/GT9YOmlAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAnimes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxAFFAtf6ysiAAACb0lEQVRIS6XWX2iPURzH8d80jLDa
@@ -165,6 +165,23 @@
         YH9GBZ5CS3gIi91VFB5XuQD7y6Alq+9Ok3MduA79dJZCv0xpQGFp0y5b4C10//VifYLu/SgeQH26HXom
         N/ETn6H7rv4n0N9PL53+EWoXCuiArejGCp9ESdA3F/qd6r2ocbok6NNHUEtbV5ZTQjsqoiuZzm8r15fE
         MfP7/gI5owz5okPrWgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRegistrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxUBCjrqo0wpAAACgElEQVRIS6XV2YtOYRzA8dfIkpTG
+        mCnLxVhCQ9mylXWyxCjLH6CZmsy4UChZ4s5yp9wolFHKDY3CFCWKQbIUuXGh5NaN5lq9vt/jd17PvL3L
+        mPnVp3ee5fx+5zznec4U0igWi7twFdf+Qy/GR4rqwaSleIRFmJewf1NYFX1aAscuoDfSVA8mHURXNEtB
+        3wbcCt3RNwUHQhtuZpNrBZM6QxcqLUUlFzEXfZHGPNOj/xQmRfewAi+RLks1Ltc9bEZWgN9meL1Pdgwn
+        s+QGjbzA8/gdRL405Uzsbx/cGK9xCCZfE/kscj5LbtAYbYHPuISfyJOvhcUas+QGjbTAVLRiAbaUWQfH
+        duIVNiK9c5P/wGU0Z8kNGqUC0WXfDJTfvS9vMV7ApbmPj/C95HfeghMovfyRFjCxBY7jCL7BF9uEhxhC
+        f1zrU9YtMBnp8lhgOZbhFzzFLtNhTEB2CONa5/4twB8enGcYyRKdxnt0xBwP4ne8wTmcQT+eotMJ4/AA
+        d+1AvQJbMQDXeg++wN00DR3Yh1mRIkvipCsoLRGOwpfojkmXSO6ObljkN3bj31qXB4Mm9zHzAm9hEU/q
+        dZQ/gR85i/gkti1as4CfZy/KC7yDazkTX1HpG5T7hBWoWcBvxn7kBVxPd8NEeJpXwu+N1iP/XKsRw7dj
+        eTC4A2exFx6agRhyzBeZPoU7ZXsMZ0G7boE5uAN3k7ugJYYcc+s+xm3cgNtzdgxnQdsnqf3/gAmD8Wcp
+        6GuAh2g+3AQu0UKkS+SY3/6euKxyMMF1b4tmFrRX4wPSl1pJDxrissrBhHZ4t+mFtttjytiCRL6oJ9iW
+        sN0aU8YWJPJrmN59rimmjDIKhT/vzTsbfuT6rwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
