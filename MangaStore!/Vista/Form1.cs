@@ -33,7 +33,7 @@
         private void btnManga_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMangaSubMenu);
-            openChildForm(new Manga());
+            openChildForm(new MangaForm());
         }
 
         private void btnAnimes_Click(object sender, EventArgs e)
@@ -121,6 +121,7 @@
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             openChildForm(new Form2());
         }
     }

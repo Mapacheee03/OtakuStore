@@ -14,7 +14,7 @@ namespace MangaStore_
 {
     public partial class Form2 : Form
     {
-        Pila pila = new Pila();
+        
         public Form2()
         {
             InitializeComponent();
@@ -32,6 +32,7 @@ namespace MangaStore_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Pila pila =new Pila();
             Mangas manga = new Mangas
             {
                 Id = 0,
@@ -42,10 +43,11 @@ namespace MangaStore_
                 Genereo = txtGenero.Text,
                 Precio = Convert.ToSingle(txtPrecio.Text),
             };
+
             //agrega fila
             pila.Push(manga);
-
-
+            MangaForm hola = new MangaForm();
+            hola.ShowDialog();
 
 
                

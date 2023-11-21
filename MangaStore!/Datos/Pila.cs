@@ -10,15 +10,17 @@ namespace MangaStore_.Datos
 
     public class Pila
     {
-        private int _cima;
+        private int _cima,_AuxCima;
         private int _longitudPila = 5;
         private Mangas[] _listaPila;
 
         public Pila()
         {
-            _cima = -1;
-            _listaPila = new Mangas[_longitudPila];
+      
+                _cima = -1;
+                _listaPila = new Mangas[_longitudPila];
         }
+       
         public bool PilaVacia()
         {
             return _cima == -1 ? true : false;
@@ -37,7 +39,7 @@ namespace MangaStore_.Datos
         /// <summary>
         public int Cantidadpila()
         {
-            return _cima + 1;
+            return _AuxCima+1;
         }
 
 
@@ -105,17 +107,18 @@ namespace MangaStore_.Datos
                 return true;
             }
         }
-        public Manga[] ImprimirPila()
+        public Mangas[] ImprimirPila()
         {
-
             if (!PilaVacia())
             {
-                Manga[] mangas = new Manga[_longitudPila];
-
+                Mangas[] mangas = new Mangas[_longitudPila];
+                Array.Copy(_listaPila, mangas, _longitudPila);
                 return mangas;
             }
             else
+            {
                 return null;
+            }
         }
     }   
 }

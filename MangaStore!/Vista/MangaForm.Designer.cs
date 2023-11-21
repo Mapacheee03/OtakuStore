@@ -39,7 +39,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMangas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgvMangas
             // 
             this.dtgvMangas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvMangas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -51,7 +51,7 @@
             this.Genero,
             this.Precio});
             this.dtgvMangas.Location = new System.Drawing.Point(25, 178);
-            this.dtgvMangas.Name = "dataGridView1";
+            this.dtgvMangas.Name = "dtgvMangas";
             this.dtgvMangas.RowTemplate.Height = 25;
             this.dtgvMangas.Size = new System.Drawing.Size(625, 150);
             this.dtgvMangas.TabIndex = 0;
@@ -106,7 +106,7 @@
             this.Controls.Add(this.dtgvMangas);
             this.Name = "MangaForm";
             this.Text = "MangaForm";
-            this.Load += new System.EventHandler(this.MangaForm_Load);
+            this.Load += new System.EventHandler(this.MangasForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMangas)).EndInit();
             this.ResumeLayout(false);
 
