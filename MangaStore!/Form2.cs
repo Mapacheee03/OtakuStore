@@ -42,7 +42,7 @@ namespace MangaStore_
                 Genereo = txtGenero.Text,
                 Precio = Convert.ToSingle(txtPrecio.Text),
             };
-
+            //agrega fila
             pila.Push(manga);
 
 
