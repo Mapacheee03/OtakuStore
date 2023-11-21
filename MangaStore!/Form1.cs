@@ -110,8 +110,13 @@
         {
             openChildForm(new Creadores());
         }
-        
+
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
 
         }
