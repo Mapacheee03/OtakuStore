@@ -71,6 +71,7 @@
 
         private void btnSeinen_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form2());
             hideSubMenu();
 
         }
