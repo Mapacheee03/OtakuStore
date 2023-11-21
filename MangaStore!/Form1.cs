@@ -120,7 +120,7 @@
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form2());
         }
     }
 

@@ -36,14 +36,14 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox2 = new TextBox();
+            txtTomo = new TextBox();
             label8 = new Label();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
+            txtEditorial = new TextBox();
+            txtAuthor = new TextBox();
+            txtGenero = new TextBox();
+            txtPrecio = new TextBox();
+            txtCategoria = new TextBox();
+            txtTitulo = new TextBox();
             panel1 = new Panel();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
@@ -127,12 +127,12 @@
             label7.TabIndex = 6;
             label7.Text = "Precio";
             // 
-            // textBox2
+            // txtTomo
             // 
-            textBox2.Location = new Point(221, 172);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 8;
+            txtTomo.Location = new Point(221, 172);
+            txtTomo.Name = "txtTomo";
+            txtTomo.Size = new Size(100, 23);
+            txtTomo.TabIndex = 8;
             // 
             // label8
             // 
@@ -145,65 +145,65 @@
             label8.TabIndex = 13;
             label8.Text = "Categoria";
             // 
-            // textBox1
+            // txtEditorial
             // 
-            textBox1.Location = new Point(221, 231);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 14;
+            txtEditorial.Location = new Point(221, 231);
+            txtEditorial.Name = "txtEditorial";
+            txtEditorial.Size = new Size(100, 23);
+            txtEditorial.TabIndex = 14;
             // 
-            // textBox3
+            // txtAuthor
             // 
-            textBox3.Location = new Point(221, 201);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 15;
+            txtAuthor.Location = new Point(221, 201);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(100, 23);
+            txtAuthor.TabIndex = 15;
             // 
-            // textBox4
+            // txtGenero
             // 
-            textBox4.Location = new Point(221, 261);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 16;
+            txtGenero.Location = new Point(221, 261);
+            txtGenero.Name = "txtGenero";
+            txtGenero.Size = new Size(100, 23);
+            txtGenero.TabIndex = 16;
             // 
-            // textBox5
+            // txtPrecio
             // 
-            textBox5.Location = new Point(221, 292);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 17;
+            txtPrecio.Location = new Point(221, 292);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(100, 23);
+            txtPrecio.TabIndex = 17;
             // 
-            // textBox6
+            // txtCategoria
             // 
-            textBox6.Location = new Point(221, 325);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 18;
+            txtCategoria.Location = new Point(221, 325);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(100, 23);
+            txtCategoria.TabIndex = 18;
             // 
-            // textBox7
+            // txtTitulo
             // 
-            textBox7.Location = new Point(221, 143);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 19;
+            txtTitulo.Location = new Point(221, 143);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(100, 23);
+            txtTitulo.TabIndex = 19;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
             panel1.Controls.Add(btnCerrarForm);
             panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(textBox7);
-            panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(txtTitulo);
+            panel1.Controls.Add(txtCategoria);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(txtPrecio);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(txtGenero);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(txtAuthor);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtEditorial);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txtTomo);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label3);
@@ -239,6 +239,7 @@
             btnAgregar.TabIndex = 20;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // Form2
             // 
@@ -263,14 +264,14 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox txtTomo;
         private Label label8;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox txtEditorial;
+        private TextBox txtAuthor;
+        private TextBox txtGenero;
+        private TextBox txtPrecio;
+        private TextBox txtCategoria;
+        private TextBox txtTitulo;
         private Panel panel1;
         private Button btnAgregar;
         private Button btnCerrarForm;
