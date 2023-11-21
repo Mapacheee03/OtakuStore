@@ -390,13 +390,19 @@
         private Button btnManga;
         private Panel panelMangaSubMenu;
         private Panel panelAnimesSubMenu;
+#pragma warning disable CS0169 // El campo 'panelSideMenu.button8' nunca se usa
         private Button button8;
+#pragma warning restore CS0169 // El campo 'panelSideMenu.button8' nunca se usa
+#pragma warning disable CS0169 // El campo 'panelSideMenu.button9' nunca se usa
         private Button button9;
+#pragma warning restore CS0169 // El campo 'panelSideMenu.button9' nunca se usa
         private Button btnAnimes;
         private Panel panelChildForm;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+#pragma warning disable CS0169 // El campo 'panelSideMenu.dateTimePicker1' nunca se usa
         private DateTimePicker dateTimePicker1;
+#pragma warning restore CS0169 // El campo 'panelSideMenu.dateTimePicker1' nunca se usa
         private Panel panelLogo;
         private Button btnKodomo;
 

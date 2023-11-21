@@ -38,7 +38,9 @@
         {
             showSubMenu(panelAnimesSubMenu);
         }
+#pragma warning disable CS8625 // No se puede convertir un literal NULL en un tipo de referencia que no acepta valores NULL.
         private Form activeForm = null;
+#pragma warning restore CS8625 // No se puede convertir un literal NULL en un tipo de referencia que no acepta valores NULL.
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -55,7 +57,7 @@
 
         private void btnShōnen_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
+            openChildForm(new Form4());
             hideSubMenu();
         }
 
@@ -108,7 +110,7 @@
         {
             openChildForm(new Creadores());
         }
-        c
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
