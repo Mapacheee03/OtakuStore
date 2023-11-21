@@ -24,7 +24,8 @@
             if (subMenu.Visible == false)
             {
                 hideSubMenu();
-                subMenu.Visible = true;
+                subMenu.Visible = true;//A
+
             }
             else
                 subMenu.Visible = false;
