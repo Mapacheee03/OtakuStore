@@ -105,5 +105,17 @@ namespace MangaStore_.Datos
                 return true;
             }
         }
-    }
+        public Manga[] ImprimirPila()
+        {
+
+            if (!PilaVacia())
+            {
+                Manga[] mangas = new Manga[_longitudPila];
+
+                return mangas;
+            }
+            else
+                return null;
+        }
+    }   
 }
