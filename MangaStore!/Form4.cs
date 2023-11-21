@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MangaStore_
 {
     public partial class Form4 : Form
     {
-        List<int> Milista = new List<int>();
+        List<object> Milista = new List<object>(); // Cambié el tipo de lista a object para permitir caracteres
         public Form4()
         {
             InitializeComponent();
@@ -20,50 +14,71 @@ namespace MangaStore_
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int n;
-            n = int.Parse(txtValor.Text);
-            Milista.Add(n);
+            Milista.Add(txtValor.Text); // Agregar el texto directamente a la lista
             txtValor.Clear();
             txtValor.Focus();
         }
 
         private void btnMostraar_Click(object sender, EventArgs e)
         {
-
-            int i;
             Liver.Items.Clear();
-            for (i = 0; i <= Milista.Count - 1; i++)
+            foreach (var item in Milista)
             {
-                Liver.Items.Add(Milista.ElementAt(i));
+                Liver.Items.Add(item.ToString()); // Mostrar cada elemento en el ListBox
             }
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            int n, pos;
-            n = int.Parse(txtValor.Text);
-            pos = int.Parse(txtPosicion.Text);
-            Milista.Insert(pos, n);
+            int pos;
+            if (int.TryParse(txtPosicion.Text, out pos)) // Intentar convertir a entero
+            {
+                if (pos >= 0 && pos <= Milista.Count)
+                {
+                    Milista.Insert(pos, txtValor.Text); // Insertar el texto en la posición especificada
+                }
+                else
+                {
+                    MessageBox.Show("La posición está fuera del rango");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una posición válida");
+            }
+
             txtValor.Clear();
             txtValor.Focus();
-            txtPosicion.Focus();
             txtPosicion.Clear();
+            txtPosicion.Focus();
         }
 
         private void btnEliminarDe_Click(object sender, EventArgs e)
         {
             int pos;
-            pos = int.Parse(txtPosicion.Text);
+            if (int.TryParse(txtPosicion.Text, out pos)) // Intentar convertir a entero
+            {
+                if (pos >= 0 && pos < Milista.Count)
+                {
+                    Milista.RemoveAt(pos); // Eliminar el elemento en la posición especificada
+                }
+                else
+                {
+                    MessageBox.Show("La posición está fuera del rango");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese una posición válida");
+            }
+
             txtPosicion.Clear();
             txtPosicion.Focus();
-            Milista.RemoveAt(pos);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int n;
-            n = int.Parse(txtValor.Text);
-            Milista.Remove(n);
+            Milista.Remove(txtValor.Text); // Eliminar el texto especificado de la lista
             txtValor.Clear();
             txtValor.Focus();
         }
