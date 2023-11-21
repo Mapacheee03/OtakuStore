@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MangaStore_.Datos
 {
+
     public class Pila
     {
         private int _cima;
@@ -33,6 +34,14 @@ namespace MangaStore_.Datos
                 return false;
             }
         }
+        /// <summary>
+        public int Cantidadpila()
+        {
+            return _cima + 1;
+        }
+
+
+        /// <returns></returns>
         public int LongitudPila()
         {
             return _longitudPila;
@@ -96,22 +105,5 @@ namespace MangaStore_.Datos
                 return true;
             }
         }
-
-        public void ImprimirPila()
-        {
-            if (!PilaVacia())
-            {
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Id}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Titulo}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Tomo}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Author}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Editorial}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Genereo}");
-                Console.WriteLine($"La pila  es {_listaPila[_cima].Precio}");
-            }
-            else
-                Console.WriteLine("la pila esta vacia");
-        }
-
     }
 }
