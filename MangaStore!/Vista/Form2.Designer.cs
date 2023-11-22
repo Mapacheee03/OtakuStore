@@ -140,6 +140,7 @@
             txtTomo.Name = "txtTomo";
             txtTomo.Size = new Size(121, 23);
             txtTomo.TabIndex = 8;
+            txtTomo.KeyPress += numericUpDownTomo_KeyPress;
             // 
             // txtEditorial
             // 
@@ -168,6 +169,7 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
             txtPrecio.TabIndex = 17;
+            txtPrecio.KeyPress += txtboxnumeros_KeyPress;
             // 
             // txtTitulo
             // 
@@ -198,7 +200,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1777, 618);
+            panel1.Size = new Size(1370, 618);
             panel1.TabIndex = 20;
             // 
             // dtgvMangas
@@ -272,7 +274,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAgregar.ForeColor = SystemColors.Control;
-            btnAgregar.Location = new Point(1035, 137);
+            btnAgregar.Location = new Point(968, 156);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(95, 33);
             btnAgregar.TabIndex = 20;
@@ -284,7 +286,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1777, 618);
+            ClientSize = new Size(1370, 618);
             Controls.Add(panel1);
             Name = "Form2";
             Text = "Form2";
