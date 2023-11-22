@@ -1,7 +1,10 @@
-﻿namespace MangaStore_
+﻿using MangaStore_.Datos;
+
+namespace MangaStore_
 {
     public partial class panelSideMenu : Form
     {
+
         public panelSideMenu()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@
         private void btnManga_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMangaSubMenu);
-            openChildForm(new MangaForm());
+         
         }
 
         private void btnAnimes_Click(object sender, EventArgs e)

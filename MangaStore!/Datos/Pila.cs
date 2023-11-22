@@ -11,7 +11,7 @@ namespace MangaStore_.Datos
     public class Pila
     {
         private int _cima,_AuxCima;
-        private int _longitudPila = 5;
+        private int _longitudPila = 10;
         private Mangas[] _listaPila;
 
         public Pila()

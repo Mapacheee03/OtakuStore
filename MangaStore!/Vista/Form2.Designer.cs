@@ -29,234 +29,270 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTomo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEditorial = new System.Windows.Forms.TextBox();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnCerrarForm = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            txtTomo = new TextBox();
+            txtEditorial = new TextBox();
+            txtAuthor = new TextBox();
+            txtGenero = new TextBox();
+            txtPrecio = new TextBox();
+            txtTitulo = new TextBox();
+            panel1 = new Panel();
+            dtgvMangas = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Titulo = new DataGridViewTextBoxColumn();
+            Tomo = new DataGridViewTextBoxColumn();
+            Author = new DataGridViewTextBoxColumn();
+            Editorial = new DataGridViewTextBoxColumn();
+            Genero = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            btnCerrarForm = new Button();
+            btnAgregar = new Button();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(111, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registrar";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(111, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(121, 37);
+            label1.TabIndex = 0;
+            label1.Text = "Registrar";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(111, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Titulo";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Transparent;
+            label2.Location = new Point(111, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 28);
+            label2.TabIndex = 1;
+            label2.Text = "Titulo";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(111, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tomo";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Transparent;
+            label3.Location = new Point(111, 172);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 28);
+            label3.TabIndex = 2;
+            label3.Text = "Tomo";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(111, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 28);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Author";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.Transparent;
+            label4.Location = new Point(399, 137);
+            label4.Name = "label4";
+            label4.Size = new Size(73, 28);
+            label4.TabIndex = 3;
+            label4.Text = "Author";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(111, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 28);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Editorial";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Transparent;
+            label5.Location = new Point(399, 169);
+            label5.Name = "label5";
+            label5.Size = new Size(85, 28);
+            label5.TabIndex = 4;
+            label5.Text = "Editorial";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(111, 261);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 28);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Genero";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.Transparent;
+            label6.Location = new Point(698, 135);
+            label6.Name = "label6";
+            label6.Size = new Size(76, 28);
+            label6.TabIndex = 5;
+            label6.Text = "Genero";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(111, 292);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Precio";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.Transparent;
+            label7.Location = new Point(698, 166);
+            label7.Name = "label7";
+            label7.Size = new Size(66, 28);
+            label7.TabIndex = 6;
+            label7.Text = "Precio";
             // 
             // txtTomo
             // 
-            this.txtTomo.Location = new System.Drawing.Point(221, 172);
-            this.txtTomo.Name = "txtTomo";
-            this.txtTomo.Size = new System.Drawing.Size(121, 23);
-            this.txtTomo.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(111, 320);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 28);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Categoria";
+            txtTomo.Location = new Point(221, 172);
+            txtTomo.Name = "txtTomo";
+            txtTomo.Size = new Size(121, 23);
+            txtTomo.TabIndex = 8;
             // 
             // txtEditorial
             // 
-            this.txtEditorial.Location = new System.Drawing.Point(221, 231);
-            this.txtEditorial.Name = "txtEditorial";
-            this.txtEditorial.Size = new System.Drawing.Size(121, 23);
-            this.txtEditorial.TabIndex = 14;
+            txtEditorial.Location = new Point(509, 167);
+            txtEditorial.Name = "txtEditorial";
+            txtEditorial.Size = new Size(121, 23);
+            txtEditorial.TabIndex = 14;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(221, 201);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(121, 23);
-            this.txtAuthor.TabIndex = 15;
+            txtAuthor.Location = new Point(509, 137);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(121, 23);
+            txtAuthor.TabIndex = 15;
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(221, 261);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(121, 23);
-            this.txtGenero.TabIndex = 16;
+            txtGenero.Location = new Point(808, 135);
+            txtGenero.Name = "txtGenero";
+            txtGenero.Size = new Size(121, 23);
+            txtGenero.TabIndex = 16;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(221, 292);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(121, 23);
-            this.txtPrecio.TabIndex = 17;
+            txtPrecio.Location = new Point(808, 166);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(121, 23);
+            txtPrecio.TabIndex = 17;
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(221, 143);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(121, 23);
-            this.txtTitulo.TabIndex = 19;
+            txtTitulo.Location = new Point(221, 143);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(121, 23);
+            txtTitulo.TabIndex = 19;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.btnCerrarForm);
-            this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.txtTitulo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtPrecio);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtGenero);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtAuthor);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtEditorial);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtTomo);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 437);
-            this.panel1.TabIndex = 20;
+            panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(dtgvMangas);
+            panel1.Controls.Add(btnCerrarForm);
+            panel1.Controls.Add(btnAgregar);
+            panel1.Controls.Add(txtTitulo);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(txtPrecio);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(txtGenero);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(txtAuthor);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(txtEditorial);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(txtTomo);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label3);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1777, 618);
+            panel1.TabIndex = 20;
             // 
-            // comboBox1
+            // dtgvMangas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Anime",
-            "Manga"});
-            this.comboBox1.Location = new System.Drawing.Point(221, 328);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 22;
-            this.comboBox1.Text = "Categoria";
+            dtgvMangas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Id, Titulo, Tomo, Author, Editorial, Genero, Precio });
+            dtgvMangas.Location = new Point(33, 260);
+            dtgvMangas.Name = "dtgvMangas";
+            dtgvMangas.RowTemplate.Height = 25;
+            dtgvMangas.Size = new Size(1333, 245);
+            dtgvMangas.TabIndex = 22;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "Codigo de barra";
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            // 
+            // Titulo
+            // 
+            Titulo.HeaderText = "Titulo";
+            Titulo.Name = "Titulo";
+            Titulo.ReadOnly = true;
+            // 
+            // Tomo
+            // 
+            Tomo.HeaderText = "Tomo";
+            Tomo.Name = "Tomo";
+            Tomo.ReadOnly = true;
+            // 
+            // Author
+            // 
+            Author.HeaderText = "Author";
+            Author.Name = "Author";
+            Author.ReadOnly = true;
+            // 
+            // Editorial
+            // 
+            Editorial.HeaderText = "Editorial";
+            Editorial.Name = "Editorial";
+            Editorial.ReadOnly = true;
+            // 
+            // Genero
+            // 
+            Genero.HeaderText = "Genero";
+            Genero.Name = "Genero";
+            Genero.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
             // 
             // btnCerrarForm
             // 
-            this.btnCerrarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnCerrarForm.FlatAppearance.BorderSize = 0;
-            this.btnCerrarForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarForm.Image")));
-            this.btnCerrarForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarForm.Location = new System.Drawing.Point(12, 12);
-            this.btnCerrarForm.Name = "btnCerrarForm";
-            this.btnCerrarForm.Size = new System.Drawing.Size(31, 47);
-            this.btnCerrarForm.TabIndex = 21;
-            this.btnCerrarForm.UseVisualStyleBackColor = false;
+            btnCerrarForm.BackColor = Color.FromArgb(32, 30, 45);
+            btnCerrarForm.FlatAppearance.BorderSize = 0;
+            btnCerrarForm.FlatStyle = FlatStyle.Flat;
+            btnCerrarForm.ForeColor = SystemColors.ControlLightLight;
+            btnCerrarForm.Image = (Image)resources.GetObject("btnCerrarForm.Image");
+            btnCerrarForm.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarForm.Location = new Point(12, 12);
+            btnCerrarForm.Name = "btnCerrarForm";
+            btnCerrarForm.Size = new Size(31, 47);
+            btnCerrarForm.TabIndex = 21;
+            btnCerrarForm.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAgregar.Location = new System.Drawing.Point(226, 376);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(95, 33);
-            this.btnAgregar.TabIndex = 20;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.ForeColor = SystemColors.Control;
+            btnAgregar.Location = new Point(1035, 137);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(95, 33);
+            btnAgregar.TabIndex = 20;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 437);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1777, 618);
+            Controls.Add(panel1);
+            Name = "Form2";
+            Text = "Form2";
+            Load += Form2_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvMangas).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -268,7 +304,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private Label label8;
         private Panel panel1;
         private Button btnAgregar;
         private Button btnCerrarForm;
@@ -278,6 +313,13 @@
         public TextBox txtGenero;
         public TextBox txtPrecio;
         public TextBox txtTitulo;
-        public ComboBox comboBox1;
+        private DataGridView dtgvMangas;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Titulo;
+        private DataGridViewTextBoxColumn Tomo;
+        private DataGridViewTextBoxColumn Author;
+        private DataGridViewTextBoxColumn Editorial;
+        private DataGridViewTextBoxColumn Genero;
+        private DataGridViewTextBoxColumn Precio;
     }
 }

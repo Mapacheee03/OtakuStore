@@ -29,369 +29,368 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(panelSideMenu));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panelAnimesSubMenu = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panelMangaSubMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnManga = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.panelAnimesSubMenu.SuspendLayout();
-            this.panelMangaSubMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            button10 = new Button();
+            panelAnimesSubMenu = new Panel();
+            button12 = new Button();
+            button13 = new Button();
+            button14 = new Button();
+            button15 = new Button();
+            button16 = new Button();
+            button5 = new Button();
+            panelMangaSubMenu = new Panel();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            btnManga = new Button();
+            btnRegistrar = new Button();
+            panelLogo = new Panel();
+            pictureBox2 = new PictureBox();
+            panelChildForm = new Panel();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            panelAnimesSubMenu.SuspendLayout();
+            panelMangaSubMenu.SuspendLayout();
+            panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.panelAnimesSubMenu);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.panelMangaSubMenu);
-            this.panel1.Controls.Add(this.btnManga);
-            this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.panelLogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(10, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 704);
-            this.panel1.TabIndex = 0;
+            panel1.AutoScroll = true;
+            panel1.BackColor = Color.FromArgb(11, 7, 17);
+            panel1.Controls.Add(button10);
+            panel1.Controls.Add(panelAnimesSubMenu);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(panelMangaSubMenu);
+            panel1.Controls.Add(btnManga);
+            panel1.Controls.Add(btnRegistrar);
+            panel1.Controls.Add(panelLogo);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(10, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(250, 704);
+            panel1.TabIndex = 0;
             // 
             // button10
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 803);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(233, 52);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "    Creadores";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
+            button10.Dock = DockStyle.Top;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = Color.Gainsboro;
+            button10.Image = (Image)resources.GetObject("button10.Image");
+            button10.ImageAlign = ContentAlignment.MiddleLeft;
+            button10.Location = new Point(0, 803);
+            button10.Name = "button10";
+            button10.Padding = new Padding(5, 0, 0, 0);
+            button10.Size = new Size(233, 52);
+            button10.TabIndex = 10;
+            button10.Text = "    Creadores";
+            button10.TextAlign = ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = true;
             // 
             // panelAnimesSubMenu
             // 
-            this.panelAnimesSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelAnimesSubMenu.Controls.Add(this.button12);
-            this.panelAnimesSubMenu.Controls.Add(this.button13);
-            this.panelAnimesSubMenu.Controls.Add(this.button14);
-            this.panelAnimesSubMenu.Controls.Add(this.button15);
-            this.panelAnimesSubMenu.Controls.Add(this.button16);
-            this.panelAnimesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAnimesSubMenu.Location = new System.Drawing.Point(0, 569);
-            this.panelAnimesSubMenu.Name = "panelAnimesSubMenu";
-            this.panelAnimesSubMenu.Size = new System.Drawing.Size(233, 234);
-            this.panelAnimesSubMenu.TabIndex = 9;
+            panelAnimesSubMenu.BackColor = Color.FromArgb(35, 32, 39);
+            panelAnimesSubMenu.Controls.Add(button12);
+            panelAnimesSubMenu.Controls.Add(button13);
+            panelAnimesSubMenu.Controls.Add(button14);
+            panelAnimesSubMenu.Controls.Add(button15);
+            panelAnimesSubMenu.Controls.Add(button16);
+            panelAnimesSubMenu.Dock = DockStyle.Top;
+            panelAnimesSubMenu.Location = new Point(0, 569);
+            panelAnimesSubMenu.Name = "panelAnimesSubMenu";
+            panelAnimesSubMenu.Size = new Size(233, 234);
+            panelAnimesSubMenu.TabIndex = 9;
             // 
             // button12
             // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.ForeColor = System.Drawing.Color.LightGray;
-            this.button12.Location = new System.Drawing.Point(0, 180);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(233, 45);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "Drama";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
+            button12.Dock = DockStyle.Top;
+            button12.FlatAppearance.BorderSize = 0;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button12.ForeColor = Color.LightGray;
+            button12.Location = new Point(0, 180);
+            button12.Name = "button12";
+            button12.Padding = new Padding(35, 0, 0, 0);
+            button12.Size = new Size(233, 45);
+            button12.TabIndex = 4;
+            button12.Text = "Drama";
+            button12.TextAlign = ContentAlignment.MiddleLeft;
+            button12.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button13.ForeColor = System.Drawing.Color.LightGray;
-            this.button13.Location = new System.Drawing.Point(0, 135);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(233, 45);
-            this.button13.TabIndex = 3;
-            this.button13.Text = "Terror";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
+            button13.Dock = DockStyle.Top;
+            button13.FlatAppearance.BorderSize = 0;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button13.ForeColor = Color.LightGray;
+            button13.Location = new Point(0, 135);
+            button13.Name = "button13";
+            button13.Padding = new Padding(35, 0, 0, 0);
+            button13.Size = new Size(233, 45);
+            button13.TabIndex = 3;
+            button13.Text = "Terror";
+            button13.TextAlign = ContentAlignment.MiddleLeft;
+            button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button14.ForeColor = System.Drawing.Color.LightGray;
-            this.button14.Location = new System.Drawing.Point(0, 90);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(233, 45);
-            this.button14.TabIndex = 2;
-            this.button14.Text = "Romance ";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
+            button14.Dock = DockStyle.Top;
+            button14.FlatAppearance.BorderSize = 0;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button14.ForeColor = Color.LightGray;
+            button14.Location = new Point(0, 90);
+            button14.Name = "button14";
+            button14.Padding = new Padding(35, 0, 0, 0);
+            button14.Size = new Size(233, 45);
+            button14.TabIndex = 2;
+            button14.Text = "Romance ";
+            button14.TextAlign = ContentAlignment.MiddleLeft;
+            button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button15.ForeColor = System.Drawing.Color.LightGray;
-            this.button15.Location = new System.Drawing.Point(0, 45);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(233, 45);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "Fantasía medieval";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
+            button15.Dock = DockStyle.Top;
+            button15.FlatAppearance.BorderSize = 0;
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button15.ForeColor = Color.LightGray;
+            button15.Location = new Point(0, 45);
+            button15.Name = "button15";
+            button15.Padding = new Padding(35, 0, 0, 0);
+            button15.Size = new Size(233, 45);
+            button15.TabIndex = 1;
+            button15.Text = "Fantasía medieval";
+            button15.TextAlign = ContentAlignment.MiddleLeft;
+            button15.UseVisualStyleBackColor = true;
             // 
             // button16
             // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button16.ForeColor = System.Drawing.Color.LightGray;
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(233, 45);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Acción";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
+            button16.Dock = DockStyle.Top;
+            button16.FlatAppearance.BorderSize = 0;
+            button16.FlatStyle = FlatStyle.Flat;
+            button16.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button16.ForeColor = Color.LightGray;
+            button16.Location = new Point(0, 0);
+            button16.Name = "button16";
+            button16.Padding = new Padding(35, 0, 0, 0);
+            button16.Size = new Size(233, 45);
+            button16.TabIndex = 0;
+            button16.Text = "Acción";
+            button16.TextAlign = ContentAlignment.MiddleLeft;
+            button16.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 517);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(233, 52);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "    Animes";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = Color.Gainsboro;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(0, 517);
+            button5.Name = "button5";
+            button5.Padding = new Padding(5, 0, 0, 0);
+            button5.Size = new Size(233, 52);
+            button5.TabIndex = 8;
+            button5.Text = "    Animes";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = true;
             // 
             // panelMangaSubMenu
             // 
-            this.panelMangaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMangaSubMenu.Controls.Add(this.button2);
-            this.panelMangaSubMenu.Controls.Add(this.button3);
-            this.panelMangaSubMenu.Controls.Add(this.button4);
-            this.panelMangaSubMenu.Controls.Add(this.button6);
-            this.panelMangaSubMenu.Controls.Add(this.button7);
-            this.panelMangaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMangaSubMenu.Location = new System.Drawing.Point(0, 280);
-            this.panelMangaSubMenu.Name = "panelMangaSubMenu";
-            this.panelMangaSubMenu.Size = new System.Drawing.Size(233, 237);
-            this.panelMangaSubMenu.TabIndex = 7;
+            panelMangaSubMenu.BackColor = Color.FromArgb(35, 32, 39);
+            panelMangaSubMenu.Controls.Add(button2);
+            panelMangaSubMenu.Controls.Add(button3);
+            panelMangaSubMenu.Controls.Add(button4);
+            panelMangaSubMenu.Controls.Add(button6);
+            panelMangaSubMenu.Controls.Add(button7);
+            panelMangaSubMenu.Dock = DockStyle.Top;
+            panelMangaSubMenu.Location = new Point(0, 280);
+            panelMangaSubMenu.Name = "panelMangaSubMenu";
+            panelMangaSubMenu.Size = new Size(233, 237);
+            panelMangaSubMenu.TabIndex = 7;
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(0, 180);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(233, 45);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Shōnen";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.LightGray;
+            button2.Location = new Point(0, 180);
+            button2.Name = "button2";
+            button2.Padding = new Padding(35, 0, 0, 0);
+            button2.Size = new Size(233, 45);
+            button2.TabIndex = 6;
+            button2.Text = "Shōnen";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(0, 135);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(233, 45);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Kodomo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.LightGray;
+            button3.Location = new Point(0, 135);
+            button3.Name = "button3";
+            button3.Padding = new Padding(35, 0, 0, 0);
+            button3.Size = new Size(233, 45);
+            button3.TabIndex = 5;
+            button3.Text = "Kodomo";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(0, 90);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(233, 45);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Seinen";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = Color.LightGray;
+            button4.Location = new Point(0, 90);
+            button4.Name = "button4";
+            button4.Padding = new Padding(35, 0, 0, 0);
+            button4.Size = new Size(233, 45);
+            button4.TabIndex = 3;
+            button4.Text = "Seinen";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.LightGray;
-            this.button6.Location = new System.Drawing.Point(0, 45);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(233, 45);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Shōjo ";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.ForeColor = Color.LightGray;
+            button6.Location = new Point(0, 45);
+            button6.Name = "button6";
+            button6.Padding = new Padding(35, 0, 0, 0);
+            button6.Size = new Size(233, 45);
+            button6.TabIndex = 2;
+            button6.Text = "Shōjo ";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.LightGray;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(233, 45);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Shōnen";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            button7.Dock = DockStyle.Top;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.ForeColor = Color.LightGray;
+            button7.Location = new Point(0, 0);
+            button7.Name = "button7";
+            button7.Padding = new Padding(35, 0, 0, 0);
+            button7.Size = new Size(233, 45);
+            button7.TabIndex = 1;
+            button7.Text = "Shōnen";
+            button7.TextAlign = ContentAlignment.MiddleLeft;
+            button7.UseVisualStyleBackColor = true;
             // 
             // btnManga
             // 
-            this.btnManga.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManga.FlatAppearance.BorderSize = 0;
-            this.btnManga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManga.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnManga.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnManga.Image = ((System.Drawing.Image)(resources.GetObject("btnManga.Image")));
-            this.btnManga.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManga.Location = new System.Drawing.Point(0, 235);
-            this.btnManga.Name = "btnManga";
-            this.btnManga.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnManga.Size = new System.Drawing.Size(233, 45);
-            this.btnManga.TabIndex = 6;
-            this.btnManga.Text = "    Mangas";
-            this.btnManga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManga.UseVisualStyleBackColor = true;
-            this.btnManga.Click += new System.EventHandler(this.btnManga_Click);
+            btnManga.Dock = DockStyle.Top;
+            btnManga.FlatAppearance.BorderSize = 0;
+            btnManga.FlatStyle = FlatStyle.Flat;
+            btnManga.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnManga.ForeColor = Color.Gainsboro;
+            btnManga.Image = (Image)resources.GetObject("btnManga.Image");
+            btnManga.ImageAlign = ContentAlignment.MiddleLeft;
+            btnManga.Location = new Point(0, 235);
+            btnManga.Name = "btnManga";
+            btnManga.Padding = new Padding(5, 0, 0, 0);
+            btnManga.Size = new Size(233, 45);
+            btnManga.TabIndex = 6;
+            btnManga.Text = "    Mangas";
+            btnManga.TextAlign = ContentAlignment.MiddleLeft;
+            btnManga.UseVisualStyleBackColor = true;
+            btnManga.Click += btnManga_Click;
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
-            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 190);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRegistrar.Size = new System.Drawing.Size(233, 45);
-            this.btnRegistrar.TabIndex = 1;
-            this.btnRegistrar.Text = "    Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            btnRegistrar.Dock = DockStyle.Top;
+            btnRegistrar.FlatAppearance.BorderSize = 0;
+            btnRegistrar.FlatStyle = FlatStyle.Flat;
+            btnRegistrar.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistrar.ForeColor = Color.Gainsboro;
+            btnRegistrar.Image = (Image)resources.GetObject("btnRegistrar.Image");
+            btnRegistrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegistrar.Location = new Point(0, 190);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Padding = new Padding(5, 0, 0, 0);
+            btnRegistrar.Size = new Size(233, 45);
+            btnRegistrar.TabIndex = 1;
+            btnRegistrar.Text = "    Registrar";
+            btnRegistrar.TextAlign = ContentAlignment.MiddleLeft;
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.pictureBox2);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 190);
-            this.panelLogo.TabIndex = 0;
+            panelLogo.Controls.Add(pictureBox2);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(233, 190);
+            panelLogo.TabIndex = 0;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(233, 190);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(233, 190);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(260, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1210, 704);
-            this.panelChildForm.TabIndex = 2;
+            panelChildForm.BackColor = Color.FromArgb(32, 30, 45);
+            panelChildForm.Controls.Add(pictureBox1);
+            panelChildForm.Dock = DockStyle.Fill;
+            panelChildForm.Location = new Point(260, 0);
+            panelChildForm.Name = "panelChildForm";
+            panelChildForm.Size = new Size(1210, 704);
+            panelChildForm.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(496, 256);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 222);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(496, 256);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(204, 222);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panelSideMenu
             // 
-            this.ClientSize = new System.Drawing.Size(1470, 704);
-            this.Controls.Add(this.panelChildForm);
-            this.Controls.Add(this.panel1);
-            this.Name = "panelSideMenu";
-            this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel1.ResumeLayout(false);
-            this.panelAnimesSubMenu.ResumeLayout(false);
-            this.panelMangaSubMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
+            ClientSize = new Size(1470, 704);
+            Controls.Add(panelChildForm);
+            Controls.Add(panel1);
+            Name = "panelSideMenu";
+            Padding = new Padding(10, 0, 0, 0);
+            panel1.ResumeLayout(false);
+            panelAnimesSubMenu.ResumeLayout(false);
+            panelMangaSubMenu.ResumeLayout(false);
+            panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
