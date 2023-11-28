@@ -28,320 +28,329 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            txtTomo = new TextBox();
-            txtEditorial = new TextBox();
-            txtAuthor = new TextBox();
-            txtGenero = new TextBox();
-            txtPrecio = new TextBox();
-            txtTitulo = new TextBox();
-            panel1 = new Panel();
-            dtgvMangas = new DataGridView();
-            btnCerrarForm = new Button();
-            btnAgregar = new Button();
-            Manga_Id = new DataGridViewTextBoxColumn();
-            Manga_Titulo = new DataGridViewTextBoxColumn();
-            Manga_Tomo = new DataGridViewTextBoxColumn();
-            Manga_Author = new DataGridViewTextBoxColumn();
-            Manga_Editorial = new DataGridViewTextBoxColumn();
-            Manga_Genero = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            Btn_Editar = new DataGridViewButtonColumn();
-            Eliminar = new DataGridViewButtonColumn();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTomo = new System.Windows.Forms.TextBox();
+            this.txtEditorial = new System.Windows.Forms.TextBox();
+            this.txtAuthor = new System.Windows.Forms.TextBox();
+            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvMangas = new System.Windows.Forms.DataGridView();
+            this.Manga_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manga_Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manga_Tomo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manga_Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manga_Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Manga_Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btn_Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnCerrarForm = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMangas)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(30, 76);
-            label1.Name = "label1";
-            label1.Size = new Size(121, 37);
-            label1.TabIndex = 0;
-            label1.Text = "Registrar";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(30, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Registrar";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(30, 131);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 28);
-            label2.TabIndex = 1;
-            label2.Text = "Titulo";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(30, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Titulo";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(30, 166);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 28);
-            label3.TabIndex = 2;
-            label3.Text = "Tomo";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(30, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 28);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tomo";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(30, 211);
-            label4.Name = "label4";
-            label4.Size = new Size(73, 28);
-            label4.TabIndex = 3;
-            label4.Text = "Author";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(30, 211);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 28);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Author";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(30, 243);
-            label5.Name = "label5";
-            label5.Size = new Size(85, 28);
-            label5.TabIndex = 4;
-            label5.Text = "Editorial";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(30, 243);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 28);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Editorial";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(30, 289);
-            label6.Name = "label6";
-            label6.Size = new Size(76, 28);
-            label6.TabIndex = 5;
-            label6.Text = "Genero";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(30, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 28);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Genero";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.Transparent;
-            label7.Location = new Point(30, 320);
-            label7.Name = "label7";
-            label7.Size = new Size(66, 28);
-            label7.TabIndex = 6;
-            label7.Text = "Precio";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(30, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 28);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Precio";
             // 
             // txtTomo
             // 
-            txtTomo.Location = new Point(140, 166);
-            txtTomo.Name = "txtTomo";
-            txtTomo.Size = new Size(121, 23);
-            txtTomo.TabIndex = 8;
-            txtTomo.KeyPress += numericUpDownTomo_KeyPress;
+            this.txtTomo.Location = new System.Drawing.Point(140, 166);
+            this.txtTomo.Name = "txtTomo";
+            this.txtTomo.Size = new System.Drawing.Size(121, 23);
+            this.txtTomo.TabIndex = 8;
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(140, 241);
-            txtEditorial.Name = "txtEditorial";
-            txtEditorial.Size = new Size(121, 23);
-            txtEditorial.TabIndex = 14;
+            this.txtEditorial.Location = new System.Drawing.Point(140, 241);
+            this.txtEditorial.Name = "txtEditorial";
+            this.txtEditorial.Size = new System.Drawing.Size(121, 23);
+            this.txtEditorial.TabIndex = 14;
             // 
             // txtAuthor
             // 
-            txtAuthor.Location = new Point(140, 211);
-            txtAuthor.Name = "txtAuthor";
-            txtAuthor.Size = new Size(121, 23);
-            txtAuthor.TabIndex = 15;
+            this.txtAuthor.Location = new System.Drawing.Point(140, 211);
+            this.txtAuthor.Name = "txtAuthor";
+            this.txtAuthor.Size = new System.Drawing.Size(121, 23);
+            this.txtAuthor.TabIndex = 15;
             // 
             // txtGenero
             // 
-            txtGenero.Location = new Point(140, 289);
-            txtGenero.Name = "txtGenero";
-            txtGenero.Size = new Size(121, 23);
-            txtGenero.TabIndex = 16;
+            this.txtGenero.Location = new System.Drawing.Point(140, 289);
+            this.txtGenero.Name = "txtGenero";
+            this.txtGenero.Size = new System.Drawing.Size(121, 23);
+            this.txtGenero.TabIndex = 16;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(140, 320);
-            txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(121, 23);
-            txtPrecio.TabIndex = 17;
-            txtPrecio.KeyPress += txtboxnumeros_KeyPress;
+            this.txtPrecio.Location = new System.Drawing.Point(140, 320);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(121, 23);
+            this.txtPrecio.TabIndex = 17;
             // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(140, 137);
-            txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(121, 23);
-            txtTitulo.TabIndex = 19;
+            this.txtTitulo.Location = new System.Drawing.Point(140, 137);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(121, 23);
+            this.txtTitulo.TabIndex = 19;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(32, 30, 45);
-            panel1.Controls.Add(dtgvMangas);
-            panel1.Controls.Add(btnCerrarForm);
-            panel1.Controls.Add(btnAgregar);
-            panel1.Controls.Add(txtTitulo);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(txtPrecio);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(txtGenero);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(txtAuthor);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtEditorial);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(txtTomo);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label3);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1370, 618);
-            panel1.TabIndex = 20;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.dtgvMangas);
+            this.panel1.Controls.Add(this.btnCerrarForm);
+            this.panel1.Controls.Add(this.btnAgregar);
+            this.panel1.Controls.Add(this.txtTitulo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtPrecio);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtGenero);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtAuthor);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtEditorial);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtTomo);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1370, 618);
+            this.panel1.TabIndex = 20;
             // 
             // dtgvMangas
             // 
-            dtgvMangas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Manga_Id, Manga_Titulo, Manga_Tomo, Manga_Author, Manga_Editorial, Manga_Genero, dataGridViewTextBoxColumn1, Btn_Editar, Eliminar });
-            dtgvMangas.Location = new Point(302, 12);
-            dtgvMangas.Name = "dtgvMangas";
-            dtgvMangas.RowTemplate.Height = 25;
-            dtgvMangas.Size = new Size(962, 535);
-            dtgvMangas.TabIndex = 22;
-            dtgvMangas.CellContentClick += dgv_CeldaClick;
-            // 
-            // btnCerrarForm
-            // 
-            btnCerrarForm.BackColor = Color.FromArgb(32, 30, 45);
-            btnCerrarForm.FlatAppearance.BorderSize = 0;
-            btnCerrarForm.FlatStyle = FlatStyle.Flat;
-            btnCerrarForm.ForeColor = SystemColors.ControlLightLight;
-            btnCerrarForm.Image = (Image)resources.GetObject("btnCerrarForm.Image");
-            btnCerrarForm.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarForm.Location = new Point(12, 12);
-            btnCerrarForm.Name = "btnCerrarForm";
-            btnCerrarForm.Size = new Size(31, 47);
-            btnCerrarForm.TabIndex = 21;
-            btnCerrarForm.UseVisualStyleBackColor = false;
-            // 
-            // btnAgregar
-            // 
-            btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAgregar.ForeColor = SystemColors.Control;
-            btnAgregar.Location = new Point(166, 349);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(95, 33);
-            btnAgregar.TabIndex = 20;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.dtgvMangas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvMangas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Manga_Id,
+            this.Manga_Titulo,
+            this.Manga_Tomo,
+            this.Manga_Author,
+            this.Manga_Editorial,
+            this.Manga_Genero,
+            this.dataGridViewTextBoxColumn1,
+            this.Btn_Editar,
+            this.Eliminar});
+            this.dtgvMangas.Location = new System.Drawing.Point(302, 12);
+            this.dtgvMangas.Name = "dtgvMangas";
+            this.dtgvMangas.RowTemplate.Height = 25;
+            this.dtgvMangas.Size = new System.Drawing.Size(962, 535);
+            this.dtgvMangas.TabIndex = 22;
+            this.dtgvMangas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CeldaClick);
             // 
             // Manga_Id
             // 
-            Manga_Id.Frozen = true;
-            Manga_Id.HeaderText = "Codigo de barra";
-            Manga_Id.Name = "Manga_Id";
-            Manga_Id.ReadOnly = true;
+            this.Manga_Id.Frozen = true;
+            this.Manga_Id.HeaderText = "Codigo de barra";
+            this.Manga_Id.Name = "Manga_Id";
+            this.Manga_Id.ReadOnly = true;
             // 
             // Manga_Titulo
             // 
-            Manga_Titulo.Frozen = true;
-            Manga_Titulo.HeaderText = "Titulo";
-            Manga_Titulo.Name = "Manga_Titulo";
-            Manga_Titulo.ReadOnly = true;
+            this.Manga_Titulo.Frozen = true;
+            this.Manga_Titulo.HeaderText = "Titulo";
+            this.Manga_Titulo.Name = "Manga_Titulo";
+            this.Manga_Titulo.ReadOnly = true;
             // 
             // Manga_Tomo
             // 
-            Manga_Tomo.Frozen = true;
-            Manga_Tomo.HeaderText = "Tomo";
-            Manga_Tomo.Name = "Manga_Tomo";
-            Manga_Tomo.ReadOnly = true;
+            this.Manga_Tomo.Frozen = true;
+            this.Manga_Tomo.HeaderText = "Tomo";
+            this.Manga_Tomo.Name = "Manga_Tomo";
+            this.Manga_Tomo.ReadOnly = true;
             // 
             // Manga_Author
             // 
-            Manga_Author.Frozen = true;
-            Manga_Author.HeaderText = "Author";
-            Manga_Author.Name = "Manga_Author";
-            Manga_Author.ReadOnly = true;
+            this.Manga_Author.Frozen = true;
+            this.Manga_Author.HeaderText = "Author";
+            this.Manga_Author.Name = "Manga_Author";
+            this.Manga_Author.ReadOnly = true;
             // 
             // Manga_Editorial
             // 
-            Manga_Editorial.Frozen = true;
-            Manga_Editorial.HeaderText = "Editorial";
-            Manga_Editorial.Name = "Manga_Editorial";
-            Manga_Editorial.ReadOnly = true;
+            this.Manga_Editorial.Frozen = true;
+            this.Manga_Editorial.HeaderText = "Editorial";
+            this.Manga_Editorial.Name = "Manga_Editorial";
+            this.Manga_Editorial.ReadOnly = true;
             // 
             // Manga_Genero
             // 
-            Manga_Genero.Frozen = true;
-            Manga_Genero.HeaderText = "Genero";
-            Manga_Genero.Name = "Manga_Genero";
-            Manga_Genero.ReadOnly = true;
+            this.Manga_Genero.Frozen = true;
+            this.Manga_Genero.HeaderText = "Genero";
+            this.Manga_Genero.Name = "Manga_Genero";
+            this.Manga_Genero.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewTextBoxColumn1.Frozen = true;
-            dataGridViewTextBoxColumn1.HeaderText = "Precio";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Btn_Editar
             // 
-            Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle1.NullValue = "Editar";
-            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
-            Btn_Editar.Frozen = true;
-            Btn_Editar.HeaderText = "Editar";
-            Btn_Editar.Name = "Btn_Editar";
-            Btn_Editar.Resizable = DataGridViewTriState.True;
-            Btn_Editar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Btn_Editar.Text = "Editar";
-            Btn_Editar.UseColumnTextForButtonValue = true;
+            this.Btn_Editar.DataPropertyName = "Editar";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.NullValue = "Editar";
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Btn_Editar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Btn_Editar.Frozen = true;
+            this.Btn_Editar.HeaderText = "Editar";
+            this.Btn_Editar.Name = "Btn_Editar";
+            this.Btn_Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Btn_Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Btn_Editar.Text = "Editar";
+            this.Btn_Editar.UseColumnTextForButtonValue = true;
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle2.NullValue = "Eliminar";
-            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
-            Eliminar.Frozen = true;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Name = "Eliminar";
-            Eliminar.ReadOnly = true;
-            Eliminar.Resizable = DataGridViewTriState.True;
-            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Eliminar.ToolTipText = "Eliminar";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            dataGridViewCellStyle6.NullValue = "Eliminar";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Blue;
+            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Eliminar.Frozen = true;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.ToolTipText = "Eliminar";
+            // 
+            // btnCerrarForm
+            // 
+            this.btnCerrarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnCerrarForm.FlatAppearance.BorderSize = 0;
+            this.btnCerrarForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarForm.Image")));
+            this.btnCerrarForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarForm.Location = new System.Drawing.Point(12, 12);
+            this.btnCerrarForm.Name = "btnCerrarForm";
+            this.btnCerrarForm.Size = new System.Drawing.Size(31, 47);
+            this.btnCerrarForm.TabIndex = 21;
+            this.btnCerrarForm.UseVisualStyleBackColor = false;
+            this.btnCerrarForm.Click += new System.EventHandler(this.btnCerrarForm_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar.Location = new System.Drawing.Point(166, 349);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(95, 33);
+            this.btnAgregar.TabIndex = 20;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // Areglos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 618);
-            Controls.Add(panel1);
-            Name = "Areglos";
-            Text = "Form2";
-            Load += Areglos_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvMangas).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1370, 618);
+            this.Controls.Add(this.panel1);
+            this.Name = "Areglos";
+            this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Areglos_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvMangas)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

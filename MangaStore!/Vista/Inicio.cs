@@ -94,7 +94,7 @@ namespace MangaStore_
             openChildForm(new Creadores());
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        public void btnRegistrar_Click(object sender, EventArgs e)
         {
 
             openChildForm(new Areglos());
