@@ -62,24 +62,15 @@ namespace MangaStore_.Datos.Areglos
             {
                 if (_Mangas[i] != null && Id == _Mangas[i].Id)
                 {
-                    // Elimina el elemento actual y mueve los elementos restantes hacia atrás
+                    
                     for (int j = i; j < Cont - 1; j++)
-                    {
                         _Mangas[j] = _Mangas[j + 1];
-                    }
-
-                    // Setea el último elemento a null
-                    if (Cont != 0)
-                        _Mangas[Cont - 1] = null;
-                    else
-                        _Mangas[Cont] = null;
-                    // Decrementa el contador
-                   
-
+                    
+                    _Mangas[Cont] = null;
+                    Cont--;
                     break;
                 }
             }
-            Cont--;
         }
         public Mangas[] ObtenerAreglo()
         {
