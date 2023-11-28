@@ -176,16 +176,18 @@ namespace MangaStore_
 
             if (e.ColumnIndex == 7)
             {
-
-                // Instancia la forma EditarAgreglos y pasa los datos
-                EditarAgreglos editar = new EditarAgreglos(manga);
-                editar.Show();
-
+                if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
+                    MessageBox.Show($"No existe nada que pueda editar");
+                else
+                {
+                            EditarAgreglos editar = new EditarAgreglos(manga);
+                            editar.Show();
+                }
             }
             else if (e.ColumnIndex == 8) // Botón de Borrar
             {
                 if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
-                    MessageBox.Show($"No existe nada que borrar");
+                    MessageBox.Show($"No existe nada que pueda borrar");
                 else
                 {
                     var result = MessageBox.Show($"Esta seguro de borar \"{manga.Titulo}\". ¿Deseas continuar?",
