@@ -12,18 +12,18 @@ using System.Windows.Forms;
 
 namespace MangaStore_
 {
-    public partial class Form2 : Form
+    public partial class Pilas : Form
     {
-        Intermedio _Intermedio = Intermedio.Instancia;
+        Intermeriatiopilas _Intermedio = Intermeriatiopilas.Instancia;
         // Intermedio _Intermedio = new Intermedio();
-        public Form2()
+        public Pilas()
         {
             InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            Mangas[] manga1 = _Intermedio.Areglos();
+            Mangas[] manga1 = _Intermedio.ObtenerAreglo();
             if (manga1 != null && manga1.Length > 0)
             {
                 for (int n = 0; n < manga1.Length; n++)
@@ -61,7 +61,7 @@ namespace MangaStore_
             }
 
             // Validación de entrada para el campo "Tomo"
-            if (!int.TryParse(txtTomo.Text, out int tomo))
+             if (!int.TryParse(txtTomo.Text, out int tomo))
             {
                 MessageBox.Show("Error en el formato del número de tomo. Por favor, introduce un valor entero válido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -76,9 +76,22 @@ namespace MangaStore_
 
             try
             {
+                Mangas[] manga1 = _Intermedio.ObtenerAreglo();
+
+                int x=1;
+                if (manga1 != null)
+                {
+                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
+                    {
+                        x = ObtenerNuevoId();
+                    }
+                }
+
+
+
                 Mangas manga = new Mangas
                 {
-                    Id = 0,
+                    Id = x,
                     Titulo = txtTitulo.Text,
                     Tomo = tomo,
                     Author = txtAuthor.Text,
@@ -88,8 +101,8 @@ namespace MangaStore_
                 };
 
                 // Agrega fila
-                _Intermedio.Areglos2(manga);
-                Mangas[] manga1 = _Intermedio.Areglos();
+                _Intermedio.insertarAreglos(manga);
+                 manga1 = _Intermedio.ObtenerAreglo();
                 int n = dtgvMangas.Rows.Add();
                 dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
                 dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
@@ -128,6 +141,12 @@ namespace MangaStore_
                 e.Handled = true;
             }
         }
-
+        private int ObtenerNuevoId()
+        {
+            // Lógica para obtener un nuevo ID único
+            // Puedes utilizar alguna lógica similar a la proporcionada anteriormente
+            Random random = new Random();
+            return random.Next(1, 1000);
+        }
     }
 }

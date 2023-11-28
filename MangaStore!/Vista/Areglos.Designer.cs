@@ -1,6 +1,6 @@
 ﻿namespace MangaStore_
 {
-    partial class Form2
+    partial class Areglos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,15 +46,17 @@
             txtTitulo = new TextBox();
             panel1 = new Panel();
             dtgvMangas = new DataGridView();
-            Id = new DataGridViewTextBoxColumn();
-            Titulo = new DataGridViewTextBoxColumn();
-            Tomo = new DataGridViewTextBoxColumn();
-            Author = new DataGridViewTextBoxColumn();
-            Editorial = new DataGridViewTextBoxColumn();
-            Genero = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
+            Manga_Id = new DataGridViewTextBoxColumn();
+            Manga_Titulo = new DataGridViewTextBoxColumn();
+            Manga_Tomo = new DataGridViewTextBoxColumn();
+            Manga_Author = new DataGridViewTextBoxColumn();
+            Manga_Editorial = new DataGridViewTextBoxColumn();
+            Manga_Genero = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            Btn_Editar = new DataGridViewButtonColumn();
+            Eliminar = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
             SuspendLayout();
@@ -62,7 +66,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(111, 82);
+            label1.Location = new Point(30, 76);
             label1.Name = "label1";
             label1.Size = new Size(121, 37);
             label1.TabIndex = 0;
@@ -73,7 +77,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(111, 137);
+            label2.Location = new Point(30, 131);
             label2.Name = "label2";
             label2.Size = new Size(62, 28);
             label2.TabIndex = 1;
@@ -84,7 +88,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(111, 172);
+            label3.Location = new Point(30, 166);
             label3.Name = "label3";
             label3.Size = new Size(61, 28);
             label3.TabIndex = 2;
@@ -95,7 +99,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(399, 137);
+            label4.Location = new Point(30, 211);
             label4.Name = "label4";
             label4.Size = new Size(73, 28);
             label4.TabIndex = 3;
@@ -106,7 +110,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(399, 169);
+            label5.Location = new Point(30, 243);
             label5.Name = "label5";
             label5.Size = new Size(85, 28);
             label5.TabIndex = 4;
@@ -117,7 +121,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(698, 135);
+            label6.Location = new Point(30, 289);
             label6.Name = "label6";
             label6.Size = new Size(76, 28);
             label6.TabIndex = 5;
@@ -128,7 +132,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.Transparent;
-            label7.Location = new Point(698, 166);
+            label7.Location = new Point(30, 320);
             label7.Name = "label7";
             label7.Size = new Size(66, 28);
             label7.TabIndex = 6;
@@ -136,7 +140,7 @@
             // 
             // txtTomo
             // 
-            txtTomo.Location = new Point(221, 172);
+            txtTomo.Location = new Point(140, 166);
             txtTomo.Name = "txtTomo";
             txtTomo.Size = new Size(121, 23);
             txtTomo.TabIndex = 8;
@@ -144,28 +148,28 @@
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(509, 167);
+            txtEditorial.Location = new Point(140, 241);
             txtEditorial.Name = "txtEditorial";
             txtEditorial.Size = new Size(121, 23);
             txtEditorial.TabIndex = 14;
             // 
             // txtAuthor
             // 
-            txtAuthor.Location = new Point(509, 137);
+            txtAuthor.Location = new Point(140, 211);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(121, 23);
             txtAuthor.TabIndex = 15;
             // 
             // txtGenero
             // 
-            txtGenero.Location = new Point(808, 135);
+            txtGenero.Location = new Point(140, 289);
             txtGenero.Name = "txtGenero";
             txtGenero.Size = new Size(121, 23);
             txtGenero.TabIndex = 16;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(808, 166);
+            txtPrecio.Location = new Point(140, 320);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
             txtPrecio.TabIndex = 17;
@@ -173,7 +177,7 @@
             // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(221, 143);
+            txtTitulo.Location = new Point(140, 137);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(121, 23);
             txtTitulo.TabIndex = 19;
@@ -206,54 +210,13 @@
             // dtgvMangas
             // 
             dtgvMangas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Id, Titulo, Tomo, Author, Editorial, Genero, Precio });
-            dtgvMangas.Location = new Point(33, 260);
+            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Manga_Id, Manga_Titulo, Manga_Tomo, Manga_Author, Manga_Editorial, Manga_Genero, dataGridViewTextBoxColumn1, Btn_Editar, Eliminar });
+            dtgvMangas.Location = new Point(302, 12);
             dtgvMangas.Name = "dtgvMangas";
             dtgvMangas.RowTemplate.Height = 25;
-            dtgvMangas.Size = new Size(1333, 245);
+            dtgvMangas.Size = new Size(962, 535);
             dtgvMangas.TabIndex = 22;
-            // 
-            // Id
-            // 
-            Id.HeaderText = "Codigo de barra";
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            // 
-            // Titulo
-            // 
-            Titulo.HeaderText = "Titulo";
-            Titulo.Name = "Titulo";
-            Titulo.ReadOnly = true;
-            // 
-            // Tomo
-            // 
-            Tomo.HeaderText = "Tomo";
-            Tomo.Name = "Tomo";
-            Tomo.ReadOnly = true;
-            // 
-            // Author
-            // 
-            Author.HeaderText = "Author";
-            Author.Name = "Author";
-            Author.ReadOnly = true;
-            // 
-            // Editorial
-            // 
-            Editorial.HeaderText = "Editorial";
-            Editorial.Name = "Editorial";
-            Editorial.ReadOnly = true;
-            // 
-            // Genero
-            // 
-            Genero.HeaderText = "Genero";
-            Genero.Name = "Genero";
-            Genero.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            Precio.HeaderText = "Precio";
-            Precio.Name = "Precio";
-            Precio.ReadOnly = true;
+            dtgvMangas.CellContentClick += dgv_CeldaClick;
             // 
             // btnCerrarForm
             // 
@@ -274,7 +237,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAgregar.ForeColor = SystemColors.Control;
-            btnAgregar.Location = new Point(968, 156);
+            btnAgregar.Location = new Point(166, 349);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(95, 33);
             btnAgregar.TabIndex = 20;
@@ -282,15 +245,99 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // Form2
+            // Manga_Id
+            // 
+            Manga_Id.Frozen = true;
+            Manga_Id.HeaderText = "Codigo de barra";
+            Manga_Id.Name = "Manga_Id";
+            Manga_Id.ReadOnly = true;
+            // 
+            // Manga_Titulo
+            // 
+            Manga_Titulo.Frozen = true;
+            Manga_Titulo.HeaderText = "Titulo";
+            Manga_Titulo.Name = "Manga_Titulo";
+            Manga_Titulo.ReadOnly = true;
+            // 
+            // Manga_Tomo
+            // 
+            Manga_Tomo.Frozen = true;
+            Manga_Tomo.HeaderText = "Tomo";
+            Manga_Tomo.Name = "Manga_Tomo";
+            Manga_Tomo.ReadOnly = true;
+            // 
+            // Manga_Author
+            // 
+            Manga_Author.Frozen = true;
+            Manga_Author.HeaderText = "Author";
+            Manga_Author.Name = "Manga_Author";
+            Manga_Author.ReadOnly = true;
+            // 
+            // Manga_Editorial
+            // 
+            Manga_Editorial.Frozen = true;
+            Manga_Editorial.HeaderText = "Editorial";
+            Manga_Editorial.Name = "Manga_Editorial";
+            Manga_Editorial.ReadOnly = true;
+            // 
+            // Manga_Genero
+            // 
+            Manga_Genero.Frozen = true;
+            Manga_Genero.HeaderText = "Genero";
+            Manga_Genero.Name = "Manga_Genero";
+            Manga_Genero.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.Frozen = true;
+            dataGridViewTextBoxColumn1.HeaderText = "Precio";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Btn_Editar
+            // 
+            Btn_Editar.DataPropertyName = "Editar";
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle1.NullValue = "Editar";
+            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            Btn_Editar.Frozen = true;
+            Btn_Editar.HeaderText = "Editar";
+            Btn_Editar.Name = "Btn_Editar";
+            Btn_Editar.Resizable = DataGridViewTriState.True;
+            Btn_Editar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Btn_Editar.Text = "Editar";
+            Btn_Editar.UseColumnTextForButtonValue = true;
+            // 
+            // Eliminar
+            // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.DarkRed;
+            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle2.NullValue = "Eliminar";
+            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            Eliminar.Frozen = true;
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.Name = "Eliminar";
+            Eliminar.ReadOnly = true;
+            Eliminar.Resizable = DataGridViewTriState.True;
+            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
+            Eliminar.ToolTipText = "Eliminar";
+            // 
+            // Areglos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1370, 618);
             Controls.Add(panel1);
-            Name = "Form2";
+            Name = "Areglos";
             Text = "Form2";
-            Load += Form2_Load;
+            Load += Areglos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).EndInit();
@@ -316,12 +363,14 @@
         public TextBox txtPrecio;
         public TextBox txtTitulo;
         private DataGridView dtgvMangas;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Titulo;
-        private DataGridViewTextBoxColumn Tomo;
-        private DataGridViewTextBoxColumn Author;
-        private DataGridViewTextBoxColumn Editorial;
-        private DataGridViewTextBoxColumn Genero;
-        private DataGridViewTextBoxColumn Precio;
+        private DataGridViewTextBoxColumn Manga_Id;
+        private DataGridViewTextBoxColumn Manga_Titulo;
+        private DataGridViewTextBoxColumn Manga_Tomo;
+        private DataGridViewTextBoxColumn Manga_Author;
+        private DataGridViewTextBoxColumn Manga_Editorial;
+        private DataGridViewTextBoxColumn Manga_Genero;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewButtonColumn Btn_Editar;
+        private DataGridViewButtonColumn Eliminar;
     }
 }

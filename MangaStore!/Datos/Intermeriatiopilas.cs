@@ -1,4 +1,5 @@
 ﻿using MangaStore_.Modelos;
+using MangaStore_.Datos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,35 +9,35 @@ using System.Threading.Tasks;
 namespace MangaStore_.Datos
 {
    
-        public class Intermedio
-        {
-            private static Intermedio _instancia;
+        public class Intermeriatiopilas
+    {
+            private static Intermeriatiopilas _instancia;
             private Pila pila = new Pila();
             private Mangas[] manga;
 
-            private Intermedio() { }
-
-            public static Intermedio Instancia
+           
+            public static Intermeriatiopilas Instancia
             {
                 get
                 {
                     if (_instancia == null)
                     {
-                        _instancia = new Intermedio();
+                        _instancia = new Intermeriatiopilas();
                     }
                     return _instancia;
                 }
             }
 
-            public Mangas[] Areglos()
+            public Mangas[] ObtenerAreglo()
             {
                 manga = pila.ImprimirPila();
                 return manga;
             }
 
-            public void Areglos2(Mangas manga)
+            public void insertarAreglos(Mangas manga)
             {
                 pila.Push(manga);
             }
+            
         }
-    }
+}

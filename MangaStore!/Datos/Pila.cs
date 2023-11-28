@@ -10,24 +10,24 @@ namespace MangaStore_.Datos
 
     public class Pila
     {
-        private int _cima,_AuxCima;
-        private int _longitudPila = 10;
+        private int _cima, _AuxCima;
+        private int _longitudPila = 999;
         private Mangas[] _listaPila;
 
         public Pila()
         {
-      
-                _cima = -1;
-                _listaPila = new Mangas[_longitudPila];
+
+            _cima = -1;
+            _listaPila = new Mangas[_longitudPila];
         }
-       
+
         public bool PilaVacia()
         {
             return _cima == -1 ? true : false;
         }
         public bool PilaLlena()
         {
-            if (_cima == (_longitudPila - 1))
+            if (_cima == _longitudPila - 1)
             {
                 return true;
             }
@@ -39,7 +39,7 @@ namespace MangaStore_.Datos
         /// <summary>
         public int Cantidadpila()
         {
-            return _AuxCima+1;
+            return _AuxCima + 1;
         }
 
 
@@ -120,5 +120,5 @@ namespace MangaStore_.Datos
                 return null;
             }
         }
-    }   
+    }
 }
