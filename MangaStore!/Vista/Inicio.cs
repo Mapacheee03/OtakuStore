@@ -57,39 +57,6 @@ namespace MangaStore_
         }
 
 
-        private void btnShōnen_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form4());
-            hideSubMenu();
-        }
-
-        private void btnShōjo_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form3());
-            hideSubMenu();
-
-        }
-
-        private void btnSeinen_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Pilas());
-            hideSubMenu();
-
-        }
-        private void btnKodomo_Click(object sender, EventArgs e)
-        {
-
-            openChildForm(new());
-            hideSubMenu();
-
-        }
-
-
-
-        private void btnMedievalFantasy_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
         private void btnCreadores_Click(object sender, EventArgs e)
         {
             openChildForm(new Creadores());
@@ -100,7 +67,17 @@ namespace MangaStore_
 
             openChildForm(new Areglos());
         }
-       
+
+        private void btnPilas_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Pilas());
+        }
+
+        private void btnArreglos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Areglos());
+        }
+
     }
 
 }

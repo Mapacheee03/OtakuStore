@@ -32,10 +32,7 @@ C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\M
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Areglos.resources
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Creadores.resources
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Vista.EditarAgreglos.resources
-C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Form3.resources
-C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Form4.resources
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.panelSideMenu.resources
-C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Manga.resources
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Pilas.resources
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.csproj.GenerateResource.cache
 C:\Users\CD04\source\repos\MVVM_implementacion_O\PruebasConSelenium\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.GeneratedMSBuildEditorConfig.editorconfig

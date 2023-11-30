@@ -5,22 +5,13 @@
     <Compile Update="Vista\Creadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vista\EditarAgreglos.cs">
+    <Compile Update="Vista\Arreglos\EditarAgreglos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vista\Pilas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vista\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vista\Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Vista\Manga.cs">
+    <Compile Update="Vista\Pilas\Pilas.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
