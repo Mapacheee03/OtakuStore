@@ -1,10 +1,11 @@
 ﻿using MangaStore_.Datos;
+using MangaStore_.Datos.Listas;
 
 namespace MangaStore_
 {
     public partial class panelSideMenu : Form
     {
-
+   
         public panelSideMenu()
         {
             InitializeComponent();
@@ -99,6 +100,7 @@ namespace MangaStore_
 
             openChildForm(new Areglos());
         }
+       
     }
 
 }

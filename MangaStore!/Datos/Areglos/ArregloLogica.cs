@@ -12,7 +12,7 @@ namespace MangaStore_.Datos.Areglos
     {
 
         private Mangas[] _Mangas = new Mangas[90];
-        private int Cont = -1;
+        public int Cont = -1;
         private static ArregloLogica _instanciaAtreglo;
        
         public static ArregloLogica Instancia

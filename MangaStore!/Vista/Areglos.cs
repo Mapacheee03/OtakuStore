@@ -1,5 +1,6 @@
 ﻿using MangaStore_.Datos;
 using MangaStore_.Datos.Areglos;
+using MangaStore_.Datos.Listas;
 using MangaStore_.Modelos;
 using MangaStore_.Vista;
 using System;
@@ -30,10 +31,9 @@ namespace MangaStore_
             Mangas[] manga1 = _ArregloLogica.ObtenerAreglo();
             if (manga1 != null && manga1.Length > 0)
             {
-                for (int n = 0; n < manga1.Length; n++)
+                for (int n = 0; n < manga1.Length&& manga1[n] != null; n++)
                 {
-                    if (manga1[n] != null)
-                    {
+                    
                         int rowIndex = dtgvMangas.Rows.Add();
                         dtgvMangas.Rows[rowIndex].Cells[0].Value = manga1[n].Id;
                         dtgvMangas.Rows[rowIndex].Cells[1].Value = manga1[n].Titulo;
@@ -42,7 +42,7 @@ namespace MangaStore_
                         dtgvMangas.Rows[rowIndex].Cells[4].Value = manga1[n].Editorial;
                         dtgvMangas.Rows[rowIndex].Cells[5].Value = manga1[n].Genereo;
                         dtgvMangas.Rows[rowIndex].Cells[6].Value = manga1[n].Precio;
-                    }
+                   
                 }
             }
         }
@@ -107,17 +107,18 @@ namespace MangaStore_
                     Genereo = txtGenero.Text,
                     Precio = precio,
                 };
-                // Agrega fila
+               
                 _ArregloLogica.insertarAreglos(manga);
-                manga1 = _ArregloLogica.ObtenerAreglo();
-                int n = dtgvMangas.Rows.Add();
-                dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
-                dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
-                dtgvMangas.Rows[n].Cells[2].Value = manga1[n].Tomo;
-                dtgvMangas.Rows[n].Cells[3].Value = manga1[n].Author;
-                dtgvMangas.Rows[n].Cells[4].Value = manga1[n].Editorial;
-                dtgvMangas.Rows[n].Cells[5].Value = manga1[n].Genereo;
-                dtgvMangas.Rows[n].Cells[6].Value = manga1[n].Precio;
+                //manga1 = _ArregloLogica.ObtenerAreglo();
+                //int n = dtgvMangas.Rows.Add();
+                //dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
+                //dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
+                //dtgvMangas.Rows[n].Cells[2].Value = manga1[n].Tomo;
+                //dtgvMangas.Rows[n].Cells[3].Value = manga1[n].Author;
+                //dtgvMangas.Rows[n].Cells[4].Value = manga1[n].Editorial;
+                //dtgvMangas.Rows[n].Cells[5].Value = manga1[n].Genereo;
+                //dtgvMangas.Rows[n].Cells[6].Value = manga1[n].Precio;
+                RefrescarLista();
             }
             catch (Exception ex)
             {
@@ -157,6 +158,7 @@ namespace MangaStore_
                 {
                             EditarAgreglos editar = new EditarAgreglos(manga);
                             editar.Show();
+
                 }
             }
             else if (e.ColumnIndex == 8) // Botón de Borrar
@@ -173,14 +175,32 @@ namespace MangaStore_
                     if (result == DialogResult.Yes)
                     {
                         _ArregloLogica.EliminarDatos(manga.Id);
+                       
 
-                      
+
                     }
                 }
             }
-                
+            RefrescarLista();
+
         }
-        
+        public void RefrescarLista()
+        {
+            dtgvMangas.Columns.Clear();
+            int cantidad = _ArregloLogica.Cont;
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            for (int i = 0; i < cantidad; i++)
+            {
+                dtgvMangas.Rows[i].Cells[0].Value = arreglo[i].Id;
+                dtgvMangas.Rows[i].Cells[1].Value = arreglo[i].Titulo;
+                dtgvMangas.Rows[i].Cells[2].Value = arreglo[i].Tomo;
+                dtgvMangas.Rows[i].Cells[3].Value = arreglo[i].Author;
+                dtgvMangas.Rows[i].Cells[4].Value = arreglo[i].Editorial;
+                dtgvMangas.Rows[i].Cells[5].Value = arreglo[i].Genereo;
+                dtgvMangas.Rows[i].Cells[6].Value = arreglo[i].Precio;
+            }
+        }
+
     }
 
 
