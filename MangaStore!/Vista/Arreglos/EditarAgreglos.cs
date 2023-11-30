@@ -14,6 +14,7 @@ namespace MangaStore_.Vista
 {
     public partial class EditarAgreglos : Form
     {
+        
         public Mangas manga1;
         public EditarAgreglos(Mangas manga)
         {
@@ -48,6 +49,8 @@ namespace MangaStore_.Vista
                 Precio = Convert.ToDouble(txtPrecio.Text),
             };
             _ArregloLogica.Actualizardatos(manga);
+            
+           
             this.Close();
         }
     }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MangaStore_.Datos
+namespace MangaStore_.Datos.Pilas
 {
 
     public class Pila

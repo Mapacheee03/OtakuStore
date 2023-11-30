@@ -28,23 +28,7 @@ namespace MangaStore_
 
         private void Areglos_Load(object sender, EventArgs e)
         {
-            Mangas[] manga1 = _ArregloLogica.ObtenerAreglo();
-            if (manga1 != null && manga1.Length > 0)
-            {
-                for (int n = 0; n < manga1.Length && manga1[n] != null; n++)
-                {
-
-                    int rowIndex = dtgvMangas.Rows.Add();
-                    dtgvMangas.Rows[rowIndex].Cells[0].Value = manga1[n].Id;
-                    dtgvMangas.Rows[rowIndex].Cells[1].Value = manga1[n].Titulo;
-                    dtgvMangas.Rows[rowIndex].Cells[2].Value = manga1[n].Tomo;
-                    dtgvMangas.Rows[rowIndex].Cells[3].Value = manga1[n].Author;
-                    dtgvMangas.Rows[rowIndex].Cells[4].Value = manga1[n].Editorial;
-                    dtgvMangas.Rows[rowIndex].Cells[5].Value = manga1[n].Genereo;
-                    dtgvMangas.Rows[rowIndex].Cells[6].Value = manga1[n].Precio;
-
-                }
-            }
+            RefrescarLista();
         }
 
         private void btnCerrarForm_Click(object sender, EventArgs e)
@@ -137,51 +121,58 @@ namespace MangaStore_
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewButtonCell buttonCell;
-            Mangas manga = new Mangas
+            if (e.ColumnIndex == 7 && e.ColumnIndex == 8)
             {
-                // Obtén los datos de la celda seleccionada
-                Id = Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value),
-                Titulo = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[1].Value),
-                Tomo = Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[2].Value),
-                Author = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[3].Value),
-                Editorial = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[4].Value),
-                Genereo = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[5].Value),
-                Precio = Convert.ToDouble(dtgvMangas.Rows[e.RowIndex].Cells[6].Value),
-            };
-
-            if (e.ColumnIndex == 7)
-            {
-                if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
-                    MessageBox.Show($"No existe nada que pueda editar");
-                else
+                DataGridViewButtonCell buttonCell;
+                Mangas manga = new Mangas
                 {
-                    EditarAgreglos editar = new EditarAgreglos(manga);
-                    editar.Show();
+                    // Obtén los datos de la celda seleccionada
+                    Id = Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value),
+                    Titulo = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[1].Value),
+                    Tomo = Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[2].Value),
+                    Author = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[3].Value),
+                    Editorial = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[4].Value),
+                    Genereo = Convert.ToString(dtgvMangas.Rows[e.RowIndex].Cells[5].Value),
+                    Precio = Convert.ToDouble(dtgvMangas.Rows[e.RowIndex].Cells[6].Value),
+                };
 
-                }
-            }
-            else if (e.ColumnIndex == 8) // Botón de Borrar
-            {
-                if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
-                    MessageBox.Show($"No existe nada que pueda borrar");
-                else
+                if (e.ColumnIndex == 7)
                 {
-                    var result = MessageBox.Show($"Esta seguro de borar \"{manga.Titulo}\". ¿Deseas continuar?",
-                                  "Error",
-                                  MessageBoxButtons.YesNo,
-                                  MessageBoxIcon.Error);
-
-                    if (result == DialogResult.Yes)
+                    if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
+                        MessageBox.Show($"No existe nada que pueda editar");
+                    else
                     {
-                        _ArregloLogica.EliminarDatos(manga.Id);
-
-
+                        EditarAgreglos editar = new EditarAgreglos(manga);
+                        editar.Show();
 
                     }
+
+
                 }
+                else if (e.ColumnIndex == 8) // Botón de Borrar
+                {
+                    if (Convert.ToInt32(dtgvMangas.Rows[e.RowIndex].Cells[0].Value) == 0)
+                        MessageBox.Show($"No existe nada que pueda borrar");
+                    else
+                    {
+                        var result = MessageBox.Show($"Esta seguro de borar \"{manga.Titulo}\". ¿Deseas continuar?",
+                                      "Error",
+                                      MessageBoxButtons.YesNo,
+                                      MessageBoxIcon.Error);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            _ArregloLogica.EliminarDatos(manga.Id);
+
+
+
+                        }
+                    }
+                }
+                RefrescarLista();
+
             }
-            RefrescarLista();
+            
 
         }
         public void RefrescarLista()
@@ -199,13 +190,14 @@ namespace MangaStore_
             dtgvMangas.Columns.Add("Genero", "Genre");
             dtgvMangas.Columns.Add("Precio", "Price");
 
-            // Add "Editar" button column
+            // Editar
             DataGridViewButtonColumn editarButtonColumn = new DataGridViewButtonColumn();
             editarButtonColumn.HeaderText = "Editar";
             editarButtonColumn.Text = "Editar";
             editarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(editarButtonColumn);
-            // Add "Eliminar" button column
+         
+            // Eliminar
             DataGridViewButtonColumn eliminarButtonColumn = new DataGridViewButtonColumn();
             eliminarButtonColumn.HeaderText = "Eliminar";
             eliminarButtonColumn.Text = "Eliminar";
@@ -221,7 +213,7 @@ namespace MangaStore_
                 if (manga == null)
                     break;
 
-                int rowIndex = dtgvMangas.Rows.Add(); // Add a new row and get its index
+                int rowIndex = dtgvMangas.Rows.Add(); 
 
                 dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
                 dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
@@ -232,7 +224,7 @@ namespace MangaStore_
                 dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
             }
 
-            // Attach event handlers for button clicks
+            
        
         }
 

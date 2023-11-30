@@ -15,7 +15,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Vista\Areglos.cs">
+    <Compile Update="Vista\Arreglos\Areglos.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
