@@ -11,7 +11,15 @@ namespace MangaStore_.Datos.Listas
     {
         private Mangas _manga;
         private Nodo _Siguiente;
-
+        public Nodo(Mangas manga) { 
+            _manga = manga;
+            _Siguiente = null;
+        }
+        public Nodo(Mangas manga,Nodo siguiente)
+        {
+            _manga = manga;
+            _Siguiente = siguiente;
+        }
         public Mangas Dato
         {
             get { return _manga; }

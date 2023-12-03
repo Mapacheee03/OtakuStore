@@ -10,11 +10,11 @@ namespace MangaStore_.Datos.Pilas
 
     public class Intermeriatiopilas
     {
-        private static Intermeriatiopilas _instancia;
+        
         private Pila pila = new Pila();
         private Mangas[] manga;
 
-
+        private static Intermeriatiopilas _instancia;
         public static Intermeriatiopilas Instancia
         {
             get

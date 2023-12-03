@@ -16,12 +16,12 @@ using System.Windows.Forms;
 
 namespace MangaStore_
 {
-    public partial class Areglos : Form
+    public partial class Listas : Form
     {
         ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
-
-        // Intermedio _Intermedio = new Intermedio();
-        public Areglos()
+        IntermediarioListas _IntermediarioListas=IntermediarioListas.Instancia;
+        
+        public Listas()
         {
             InitializeComponent();
         }
@@ -70,7 +70,7 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _ArregloLogica.ObtenerAreglo();
+                Mangas[] manga1 = _IntermediarioListas.OptenerListas();
 
                 int x = 1;
                 if (manga1 != null)
@@ -92,16 +92,7 @@ namespace MangaStore_
                     Precio = precio,
                 };
 
-                _ArregloLogica.insertarAreglos(manga);
-                //manga1 = _ArregloLogica.ObtenerAreglo();
-                //int n = dtgvMangas.Rows.Add();
-                //dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
-                //dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
-                //dtgvMangas.Rows[n].Cells[2].Value = manga1[n].Tomo;
-                //dtgvMangas.Rows[n].Cells[3].Value = manga1[n].Author;
-                //dtgvMangas.Rows[n].Cells[4].Value = manga1[n].Editorial;
-                //dtgvMangas.Rows[n].Cells[5].Value = manga1[n].Genereo;
-                //dtgvMangas.Rows[n].Cells[6].Value = manga1[n].Precio;
+                _IntermediarioListas.insertarLista(manga);
                 RefrescarLista();
             }
             catch (Exception ex)
@@ -113,8 +104,7 @@ namespace MangaStore_
 
         private int ObtenerNuevoId()
         {
-            // Lógica para obtener un nuevo ID único
-            // Puedes utilizar alguna lógica similar a la proporcionada anteriormente
+          
             Random random = new Random();
             return random.Next(1, 1000);
         }
@@ -142,12 +132,9 @@ namespace MangaStore_
                         MessageBox.Show($"No existe nada que pueda editar");
                     else
                     {
-                        EditarAgreglos editar = new EditarAgreglos(manga);
+                        EditarAgreglos editar = new EditarAgreglos(manga);////cambiar esto 
                         editar.Show();
-
                     }
-
-
                 }
                 else if (e.ColumnIndex == 8) // Botón de Borrar
                 {
@@ -156,24 +143,14 @@ namespace MangaStore_
                     else
                     {
                         var result = MessageBox.Show($"Esta seguro de borar \"{manga.Titulo}\". ¿Deseas continuar?",
-                                      "Error",
-                                      MessageBoxButtons.YesNo,
-                                      MessageBoxIcon.Error);
+                                      "Error",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
 
                         if (result == DialogResult.Yes)
-                        {
-                            _ArregloLogica.EliminarDatos(manga.Id);
-
-
-
-                        }
+                            _IntermediarioListas.EliminarLitas(manga.Id);////cambiar esto
                     }
                 }
                 RefrescarLista();
-
             }
-            
-
         }
         public void RefrescarLista()
         {
@@ -206,7 +183,7 @@ namespace MangaStore_
 
             
 
-            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            Mangas[] arreglo = _IntermediarioListas.OptenerListas();
 
             foreach (Mangas manga in arreglo)
             {
@@ -227,7 +204,6 @@ namespace MangaStore_
             
        
         }
-
 
     }
 }

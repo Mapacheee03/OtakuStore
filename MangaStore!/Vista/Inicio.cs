@@ -5,7 +5,7 @@ namespace MangaStore_
 {
     public partial class panelSideMenu : Form
     {
-   
+
         public panelSideMenu()
         {
             InitializeComponent();
@@ -78,6 +78,10 @@ namespace MangaStore_
             openChildForm(new Areglos());
         }
 
+        private void btnListas_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Listas());
+        }
     }
 
 }
