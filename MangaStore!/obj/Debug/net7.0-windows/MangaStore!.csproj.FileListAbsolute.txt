@@ -5,10 +5,7 @@ C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\bin\Debug\net7.0-windows\Mang
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\bin\Debug\net7.0-windows\MangaStore!.pdb
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Properties.Resources.resources
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Creadores.resources
-C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Form3.resources
-C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Form4.resources
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.panelSideMenu.resources
-C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Manga.resources
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.csproj.GenerateResource.cache
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.AssemblyInfoInputs.cache
@@ -94,3 +91,4 @@ C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\re
 C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.pdb
 C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.genruntimeconfig.cache
 C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\ref\MangaStore!.dll
+C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Listas.resources
