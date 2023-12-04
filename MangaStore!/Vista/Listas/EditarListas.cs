@@ -1,4 +1,5 @@
 ﻿using MangaStore_.Datos.Areglos;
+using MangaStore_.Datos.Listas;
 using MangaStore_.Modelos;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,11 @@ using System.Windows.Forms;
 
 namespace MangaStore_.Vista
 {
-    public partial class EditarAgreglos : Form
+    public partial class EditarListas : Form
     {
 
         public Mangas manga1;
-        public EditarAgreglos(Mangas manga)
+        public EditarListas(Mangas manga)
         {
             InitializeComponent();
             manga1 = manga;
@@ -37,7 +38,7 @@ namespace MangaStore_.Vista
 
         private void Click_Editar(object sender, EventArgs e)
         {
-            ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
+            IntermediarioListas _IntermediarioListas = IntermediarioListas.Instancia;
             Mangas manga = new Mangas
             {
                 Id = Convert.ToInt32(Codigo_de_barra.Text),
@@ -48,7 +49,7 @@ namespace MangaStore_.Vista
                 Genereo = txtGenero.Text,
                 Precio = Convert.ToDouble(txtPrecio.Text),
             };
-            _ArregloLogica.Actualizardatos(manga);
+            _IntermediarioListas.EditarLitas(manga);
 
 
             this.Close();

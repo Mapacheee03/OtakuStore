@@ -1,6 +1,6 @@
 ﻿namespace MangaStore_.Vista
 {
-    partial class EditarAgreglos
+    partial class EditarListas
     {
         /// <summary>
         /// Required designer variable.

@@ -92,3 +92,4 @@ C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\Ma
 C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.genruntimeconfig.cache
 C:\Users\cisco01\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\ref\MangaStore!.dll
 C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Listas.resources
+C:\Users\Jesus\source\repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Vista.EditarListas.resources

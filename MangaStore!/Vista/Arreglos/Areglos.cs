@@ -93,15 +93,8 @@ namespace MangaStore_
                 };
 
                 _ArregloLogica.insertarAreglos(manga);
-                //manga1 = _ArregloLogica.ObtenerAreglo();
-                //int n = dtgvMangas.Rows.Add();
-                //dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
-                //dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
-                //dtgvMangas.Rows[n].Cells[2].Value = manga1[n].Tomo;
-                //dtgvMangas.Rows[n].Cells[3].Value = manga1[n].Author;
-                //dtgvMangas.Rows[n].Cells[4].Value = manga1[n].Editorial;
-                //dtgvMangas.Rows[n].Cells[5].Value = manga1[n].Genereo;
-                //dtgvMangas.Rows[n].Cells[6].Value = manga1[n].Precio;
+
+
                 RefrescarLista();
             }
             catch (Exception ex)
@@ -121,7 +114,7 @@ namespace MangaStore_
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8)
+            if (e.ColumnIndex == 7 && e.RowIndex>=0 || e.ColumnIndex == 8 && e.RowIndex >= 0)
             {
                 DataGridViewButtonCell buttonCell;
                 Mangas manga = new Mangas
@@ -143,7 +136,7 @@ namespace MangaStore_
                     else
                     {
                         EditarAgreglos editar = new EditarAgreglos(manga);
-                        editar.Show();
+                        editar.ShowDialog();
 
                     }
 
@@ -172,7 +165,7 @@ namespace MangaStore_
                 RefrescarLista();
 
             }
-            
+
 
         }
         public void RefrescarLista()
@@ -196,7 +189,7 @@ namespace MangaStore_
             editarButtonColumn.Text = "Editar";
             editarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(editarButtonColumn);
-         
+
             // Eliminar
             DataGridViewButtonColumn eliminarButtonColumn = new DataGridViewButtonColumn();
             eliminarButtonColumn.HeaderText = "Eliminar";
@@ -204,7 +197,7 @@ namespace MangaStore_
             eliminarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(eliminarButtonColumn);
 
-            
+
 
             Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
 
@@ -213,7 +206,7 @@ namespace MangaStore_
                 if (manga == null)
                     break;
 
-                int rowIndex = dtgvMangas.Rows.Add(); 
+                int rowIndex = dtgvMangas.Rows.Add();
 
                 dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
                 dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
@@ -224,8 +217,8 @@ namespace MangaStore_
                 dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
             }
 
-            
-       
+
+
         }
 
 

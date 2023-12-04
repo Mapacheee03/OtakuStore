@@ -18,7 +18,7 @@ namespace MangaStore_
 {
     public partial class Listas : Form
     {
-        ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
+     
         IntermediarioListas _IntermediarioListas=IntermediarioListas.Instancia;
         
         public Listas()
@@ -111,7 +111,7 @@ namespace MangaStore_
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7 || e.ColumnIndex == 8)
+            if (e.ColumnIndex == 7 && e.RowIndex >= 0 || e.ColumnIndex == 8 && e.RowIndex >= 0)
             {
                 DataGridViewButtonCell buttonCell;
                 Mangas manga = new Mangas
@@ -132,8 +132,8 @@ namespace MangaStore_
                         MessageBox.Show($"No existe nada que pueda editar");
                     else
                     {
-                        EditarAgreglos editar = new EditarAgreglos(manga);////cambiar esto 
-                        editar.Show();
+                        EditarListas editar = new EditarListas(manga);////cambiar esto 
+                        editar.ShowDialog();
                     }
                 }
                 else if (e.ColumnIndex == 8) // Botón de Borrar
@@ -181,17 +181,13 @@ namespace MangaStore_
             eliminarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(eliminarButtonColumn);
 
-            
-
             Mangas[] arreglo = _IntermediarioListas.OptenerListas();
-
             foreach (Mangas manga in arreglo)
             {
                 if (manga == null)
                     break;
 
                 int rowIndex = dtgvMangas.Rows.Add(); 
-
                 dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
                 dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
                 dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
@@ -200,9 +196,6 @@ namespace MangaStore_
                 dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
                 dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
             }
-
-            
-       
         }
 
     }

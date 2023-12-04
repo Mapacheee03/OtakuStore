@@ -18,6 +18,9 @@
     <Compile Update="Vista\Arreglos\Areglos.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Vista\Listas\EditarListas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Vista\Listas\Listas.cs">
       <SubType>Form</SubType>
     </Compile>
