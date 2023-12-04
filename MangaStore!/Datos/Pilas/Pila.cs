@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace MangaStore_.Datos.Pilas
 {
@@ -105,6 +106,69 @@ namespace MangaStore_.Datos.Pilas
                 }
                 //_cima = -1;
                 return true;
+            }
+        }
+        public void EliminarDatos(int id)
+        {
+            if (_cima == -1)
+            {
+                Console.WriteLine("La pila está vacía. No se pueden eliminar elementos.");
+                return;
+            }
+
+            int elementoAEliminar = -1;
+
+            // Buscar el elemento con el ID proporcionado
+            for (int i = _cima; i >= 0; i--)
+            {
+                if (_listaPila[i] != null && id == _listaPila[i].Id)
+                {
+                    elementoAEliminar = i;
+                    break;
+                }
+            }
+
+            if (elementoAEliminar != -1)
+            {
+                // Eliminar el elemento encontrando, moviendo los elementos restantes hacia arriba en la pila
+                for (int i = elementoAEliminar; i < _cima; i++)
+                {
+                    _listaPila[i] = _listaPila[i + 1];
+                }
+
+                _listaPila[_cima] = null;
+                _cima--;
+                Console.WriteLine($"Elemento con ID {id} eliminado de la pila.");
+            }
+            else
+            {
+                Console.WriteLine($"Elemento con ID {id} no encontrado en la pila.");
+            }
+        }
+    
+
+        public void ActualizarDatos(Mangas mangas)
+        {
+                Pila pilaTemp = new Pila();
+
+            while (!PilaVacia())
+            {
+                Mangas elemento = ExtraerElemento();
+                if (elemento.Id == mangas.Id)
+                {
+                    elemento.Titulo = mangas.Titulo;
+                    elemento.Tomo = mangas.Tomo;
+                    elemento.Author = mangas.Author;
+                    elemento.Editorial = mangas.Editorial;
+                    elemento.Genereo = mangas.Genereo;
+                    elemento.Precio = mangas.Precio;
+                }
+                pilaTemp.Push(elemento);
+            }
+
+            while (!pilaTemp.PilaVacia())
+            {
+                Push(pilaTemp.ExtraerElemento());
             }
         }
         public Mangas[] ImprimirPila()

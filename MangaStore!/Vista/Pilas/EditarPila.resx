@@ -117,45 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Manga_Id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Manga_Titulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Manga_Tomo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Manga_Author.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Manga_Editorial.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Manga_Genero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Btn_Editar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCerrarForm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCxAFFhmeZDjoAAACKUlEQVRIS52Wy1ITURRF40CdwECY
-        CMGp4rcoTsES1KEK/g+o34BahToXBz7mqIB+goroSK24VrL7Vpp0qCS7alXu3efcR/d9dFqnqdPpXIIN
-        eAUf4Vew/BLWYSHpo4tGbXgMf0H9gQPYDZb1lL+PYD7NTxeJN+AnqLewChcSLsKbgTV4B8o2Swk3i4SH
-        8A++wTKcSWiozIEV+A623UioLgLO3IRDuBx7ZNFmEb6kj/qTYPjOfURnfiX22KKtg/gkRzAXuxt4Amo5
-        VlfUp1McqpM51G/aEdqqDLeiu8UFLe+c8jT8hm04F7tILzFzpmLruybvwd3V1nBh1WpyivDsQD2DMojl
-        eGo7dhHenV6o88CKB8bRmrbiWXgK6gWchwEv6UV4s2CfO1b24SCxARHr79DJPO8VmzuvRMwd9cnCMbyO
-        3yjiDlJ1rLw6hnauiHvijy24PXfjN4r4JAO8gSMLn+Ew/oCITfqKvsKehWqRZxIrwhtYUBjwkl6EV1tk
-        r1y1lngR3qTb9G4v1LlnZQEczVux/6BNwaQH7QPYZ7syvc/VSteIqE9yVdyyI7QZq2vOg7vJi2ox9tii
-        7VX4ES7G7gljCbxqPSBjD0IbO3fn2Me12HUR8PtrgjPwVhz1g+Nr8Yq27XpCzSLhepKVt+JtmE24SA+8
-        1FxQ5aSaZ35SJM7BFrgTlL++uuqjb7n/D8Em1N/5KKKRX7r74IHaA+8tsbwDxnpbsVGt1n+c1tqC7frh
-        egAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

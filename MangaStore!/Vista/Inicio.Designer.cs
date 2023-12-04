@@ -33,7 +33,7 @@
             button10 = new Button();
             panelMangaSubMenu = new Panel();
             button3 = new Button();
-            button4 = new Button();
+            btnCola = new Button();
             button6 = new Button();
             button7 = new Button();
             btnManga = new Button();
@@ -88,7 +88,7 @@
             // 
             panelMangaSubMenu.BackColor = Color.FromArgb(35, 32, 39);
             panelMangaSubMenu.Controls.Add(button3);
-            panelMangaSubMenu.Controls.Add(button4);
+            panelMangaSubMenu.Controls.Add(btnCola);
             panelMangaSubMenu.Controls.Add(button6);
             panelMangaSubMenu.Controls.Add(button7);
             panelMangaSubMenu.Dock = DockStyle.Top;
@@ -114,21 +114,22 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += btnListas_Click;
             // 
-            // button4
+            // btnCola
             // 
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.LightGray;
-            button4.Location = new Point(0, 90);
-            button4.Name = "button4";
-            button4.Padding = new Padding(35, 0, 0, 0);
-            button4.Size = new Size(250, 45);
-            button4.TabIndex = 3;
-            button4.Text = "Cola";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
+            btnCola.Dock = DockStyle.Top;
+            btnCola.FlatAppearance.BorderSize = 0;
+            btnCola.FlatStyle = FlatStyle.Flat;
+            btnCola.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCola.ForeColor = Color.LightGray;
+            btnCola.Location = new Point(0, 90);
+            btnCola.Name = "btnCola";
+            btnCola.Padding = new Padding(35, 0, 0, 0);
+            btnCola.Size = new Size(250, 45);
+            btnCola.TabIndex = 3;
+            btnCola.Text = "Cola";
+            btnCola.TextAlign = ContentAlignment.MiddleLeft;
+            btnCola.UseVisualStyleBackColor = true;
+            btnCola.Click += btnCola_Click;
             // 
             // button6
             // 
@@ -224,13 +225,13 @@
             panelChildForm.Dock = DockStyle.Fill;
             panelChildForm.Location = new Point(260, 0);
             panelChildForm.Name = "panelChildForm";
-            panelChildForm.Size = new Size(1189, 581);
+            panelChildForm.Size = new Size(1110, 581);
             panelChildForm.TabIndex = 2;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
-            pictureBox1.Location = new Point(485, 194);
+            pictureBox1.Location = new Point(446, 194);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(204, 222);
             pictureBox1.TabIndex = 0;
@@ -238,7 +239,7 @@
             // 
             // panelSideMenu
             // 
-            ClientSize = new Size(1449, 581);
+            ClientSize = new Size(1370, 581);
             Controls.Add(panelChildForm);
             Controls.Add(panel1);
             Name = "panelSideMenu";
@@ -271,7 +272,7 @@
         private Button button10;
         private Panel panelMangaSubMenu;
         private Button button3;
-        private Button button4;
+        private Button btnCola;
         private Button button6;
         private Button button7;
         private Button btnManga;

@@ -11,7 +11,7 @@ namespace MangaStore_.Datos.Pilas
     public class Intermeriatiopilas
     {
         
-        private Pila pila = new Pila();
+        private Pila _pila = new Pila();
         private Mangas[] manga;
 
         private static Intermeriatiopilas _instancia;
@@ -27,16 +27,24 @@ namespace MangaStore_.Datos.Pilas
             }
         }
 
-        public Mangas[] ObtenerAreglo()
+        public Mangas[] ObtenerPila()
         {
-            manga = pila.ImprimirPila();
+            manga = _pila.ImprimirPila();
             return manga;
         }
 
         public void insertarAreglos(Mangas manga)
         {
-            pila.Push(manga);
+            _pila.Push(manga);
+        }
+        public void ActualizarDatos(Mangas manga)
+        {
+            _pila.ActualizarDatos(manga);
         }
 
+        public void EliminarDatos(int id)
+        {
+            _pila.EliminarDatos(id);
+        }
     }
 }

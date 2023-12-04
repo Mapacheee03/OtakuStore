@@ -1,7 +1,6 @@
-﻿using MangaStore_.Datos.Pilas;
+﻿using MangaStore_.Datos.Areglos;
+using MangaStore_.Datos.Colas;
 using MangaStore_.Modelos;
-using MangaStore_.Vista.Colas;
-using MangaStore_.Vista.Pilas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,70 +11,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MangaStore_
+namespace MangaStore_.Vista.Colas
 {
-    public partial class Pilas : Form
+    public partial class Cola : Form
     {
-        private Intermeriatiopilas _Intermedio = Intermeriatiopilas.Instancia;
-        // Intermedio _Intermedio = new Intermedio();
-        public Pilas()
+        private Intermeriatiocolas _Intermedio = Intermeriatiocolas.Instancia;
+
+        public Cola()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Cola_Load(object sender, EventArgs e)
         {
-            Mangas[] manga1 = _Intermedio.ObtenerPila();
+            Mangas[] manga1 = _Intermedio.ObtenerAreglo();
             if (manga1 != null && manga1.Length > 0)
             {
-                for (int n = 0; n < manga1.Length; n++)
+                foreach (var manga in manga1)
                 {
-                    if (manga1[n] != null)
+                    if (manga != null)
                     {
                         int rowIndex = dtgvMangas.Rows.Add();
-                        dtgvMangas.Rows[rowIndex].Cells[0].Value = manga1[n].Id;
-                        dtgvMangas.Rows[rowIndex].Cells[1].Value = manga1[n].Titulo;
-                        dtgvMangas.Rows[rowIndex].Cells[2].Value = manga1[n].Tomo;
-                        dtgvMangas.Rows[rowIndex].Cells[3].Value = manga1[n].Author;
-                        dtgvMangas.Rows[rowIndex].Cells[4].Value = manga1[n].Editorial;
-                        dtgvMangas.Rows[rowIndex].Cells[5].Value = manga1[n].Genereo;
-                        dtgvMangas.Rows[rowIndex].Cells[6].Value = manga1[n].Precio;
+                        dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
+                        dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
+                        dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
+                        dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
+                        dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
+                        dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
+                        dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
                     }
                 }
             }
-        }
-
-
-
-        private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir solo números, coma (,) o punto (.)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-
-            // Permitir solo un punto o coma decimal
-            if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permitir solo números y teclas de control (por ejemplo, borrar, retroceso)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        private int ObtenerNuevoId()
-        {
-            // Lógica para obtener un nuevo ID único
-            // Puedes utilizar alguna lógica similar a la proporcionada anteriormente
-            Random random = new Random();
-            return random.Next(1, 1000);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -92,14 +58,12 @@ namespace MangaStore_
                 return;
             }
 
-            // Validación de entrada para el campo "Tomo"
             if (!int.TryParse(txtTomo.Text, out int tomo))
             {
                 MessageBox.Show("Error en el formato del número de tomo. Por favor, introduce un valor entero válido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Validación de entrada para el campo "Precio"
             if (!double.TryParse(txtPrecio.Text, out double precio))
             {
                 MessageBox.Show("Error en el formato del precio. Por favor, introduce un valor numérico válido.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -108,7 +72,7 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _Intermedio.ObtenerPila();
+                Mangas[] manga1 = _Intermedio.ObtenerAreglo();
 
                 int x = 1;
                 if (manga1 != null)
@@ -118,8 +82,6 @@ namespace MangaStore_
                         x = ObtenerNuevoId();
                     }
                 }
-
-
 
                 Mangas manga = new Mangas
                 {
@@ -132,9 +94,9 @@ namespace MangaStore_
                     Precio = precio,
                 };
 
-                // Agrega fila
-                _Intermedio.insertarAreglos(manga);
-                manga1 = _Intermedio.ObtenerPila();
+                _Intermedio.InsertarEnCola(manga);
+                manga1 = _Intermedio.ObtenerAreglo();
+
                 int n = dtgvMangas.Rows.Add();
                 dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
                 dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
@@ -150,11 +112,31 @@ namespace MangaStore_
             }
         }
 
-        private void btnCerrarForm_Click(object sender, EventArgs e)
+        private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
         }
 
+        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private int ObtenerNuevoId()
+        {
+            Random random = new Random();
+            return random.Next(1, 1000);
+        }
         public void RefrescarLista()
         {
             // Clear existing columns and rows
@@ -186,7 +168,7 @@ namespace MangaStore_
 
 
 
-            Mangas[] arreglo = _Intermedio.ObtenerPila();
+            Mangas[] arreglo = _Intermedio.ObtenerAreglo();
 
             foreach (Mangas manga in arreglo)
             {
@@ -231,7 +213,7 @@ namespace MangaStore_
                         MessageBox.Show($"No existe nada que pueda editar");
                     else
                     {
-                        EditarPila editar = new EditarPila(manga);
+                        EditarCola editar = new EditarCola(manga);
                         editar.Show();
 
                     }
@@ -261,8 +243,7 @@ namespace MangaStore_
                 RefrescarLista();
 
             }
-        }
 
-        
+        }
     }
 }

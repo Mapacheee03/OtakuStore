@@ -1,5 +1,6 @@
 ﻿using MangaStore_.Datos;
 using MangaStore_.Datos.Listas;
+using MangaStore_.Vista.Colas;
 
 namespace MangaStore_
 {
@@ -81,6 +82,11 @@ namespace MangaStore_
         private void btnListas_Click(object sender, EventArgs e)
         {
             openChildForm(new Listas());
+        }
+
+        private void btnCola_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Cola());
         }
     }
 

@@ -1,6 +1,6 @@
-﻿namespace MangaStore_
+﻿namespace MangaStore_.Vista.Colas
 {
-    partial class Pilas
+    partial class Cola
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pilas));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cola));
             panel1 = new Panel();
             dtgvMangas = new DataGridView();
             Manga_Id = new DataGridViewTextBoxColumn();
@@ -83,8 +83,8 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1370, 618);
-            panel1.TabIndex = 22;
+            panel1.Size = new Size(1019, 450);
+            panel1.TabIndex = 21;
             // 
             // dtgvMangas
             // 
@@ -149,13 +149,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle1.NullValue = "Editar";
-            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Yellow;
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle3.NullValue = "Editar";
+            dataGridViewCellStyle3.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle3;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -166,13 +166,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle2.NullValue = "Eliminar";
-            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.DarkRed;
+            dataGridViewCellStyle4.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle4.NullValue = "Eliminar";
+            dataGridViewCellStyle4.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle4;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -194,7 +194,6 @@
             btnCerrarForm.Size = new Size(31, 47);
             btnCerrarForm.TabIndex = 21;
             btnCerrarForm.UseVisualStyleBackColor = false;
-            btnCerrarForm.Click += btnCerrarForm_Click;
             // 
             // btnAgregar
             // 
@@ -330,15 +329,15 @@
             label3.TabIndex = 2;
             label3.Text = "Tomo";
             // 
-            // Pilas
+            // Cola
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 618);
+            ClientSize = new Size(1019, 450);
             Controls.Add(panel1);
-            Name = "Pilas";
-            Text = "Form2";
-            Load += Form2_Load;
+            Name = "Cola";
+            Text = "Cola";
+            Load += Cola_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).EndInit();
@@ -346,7 +345,7 @@
         }
 
         #endregion
-        private DataGridView dataGridView1;
+
         private Panel panel1;
         private DataGridView dtgvMangas;
         private DataGridViewTextBoxColumn Manga_Id;
