@@ -1,5 +1,6 @@
 ﻿using MangaStore_.Datos.Areglos;
 using MangaStore_.Datos.Colas;
+using MangaStore_.Datos.Listas;
 using MangaStore_.Modelos;
 using System;
 using System.Collections.Generic;
@@ -24,24 +25,7 @@ namespace MangaStore_.Vista.Colas
 
         private void Cola_Load(object sender, EventArgs e)
         {
-            Mangas[] manga1 = _Intermedio.ObtenerAreglo();
-            if (manga1 != null && manga1.Length > 0)
-            {
-                foreach (var manga in manga1)
-                {
-                    if (manga != null)
-                    {
-                        int rowIndex = dtgvMangas.Rows.Add();
-                        dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
-                        dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
-                        dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
-                        dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
-                        dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
-                        dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
-                        dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
-                    }
-                }
-            }
+            RefrescarLista();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -95,16 +79,7 @@ namespace MangaStore_.Vista.Colas
                 };
 
                 _Intermedio.InsertarEnCola(manga);
-                manga1 = _Intermedio.ObtenerAreglo();
-
-                int n = dtgvMangas.Rows.Add();
-                dtgvMangas.Rows[n].Cells[0].Value = manga1[n].Id;
-                dtgvMangas.Rows[n].Cells[1].Value = manga1[n].Titulo;
-                dtgvMangas.Rows[n].Cells[2].Value = manga1[n].Tomo;
-                dtgvMangas.Rows[n].Cells[3].Value = manga1[n].Author;
-                dtgvMangas.Rows[n].Cells[4].Value = manga1[n].Editorial;
-                dtgvMangas.Rows[n].Cells[5].Value = manga1[n].Genereo;
-                dtgvMangas.Rows[n].Cells[6].Value = manga1[n].Precio;
+                RefrescarLista();
             }
             catch (Exception ex)
             {
@@ -137,6 +112,7 @@ namespace MangaStore_.Vista.Colas
             Random random = new Random();
             return random.Next(1, 1000);
         }
+
         public void RefrescarLista()
         {
             // Clear existing columns and rows
@@ -166,17 +142,15 @@ namespace MangaStore_.Vista.Colas
             eliminarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(eliminarButtonColumn);
 
-
-
             Mangas[] arreglo = _Intermedio.ObtenerAreglo();
 
+            if(arreglo!=null)
             foreach (Mangas manga in arreglo)
             {
                 if (manga == null)
                     break;
 
                 int rowIndex = dtgvMangas.Rows.Add();
-
                 dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
                 dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
                 dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
@@ -185,9 +159,6 @@ namespace MangaStore_.Vista.Colas
                 dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
                 dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
             }
-
-
-
         }
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
@@ -214,7 +185,7 @@ namespace MangaStore_.Vista.Colas
                     else
                     {
                         EditarCola editar = new EditarCola(manga);
-                        editar.Show();
+                        editar.ShowDialog();
 
                     }
 

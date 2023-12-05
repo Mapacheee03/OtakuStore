@@ -120,3 +120,6 @@ C:\Users\Orlxndo\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\re
 C:\Users\Orlxndo\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.pdb
 C:\Users\Orlxndo\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore!.genruntimeconfig.cache
 C:\Users\Orlxndo\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\ref\MangaStore!.dll
+C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Vista.Colas.Cola.resources
+C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Vista.Colas.EditarCola.resources
+C:\Users\Jesus\Source\Repos\OtakuStore\MangaStore!\obj\Debug\net7.0-windows\MangaStore_.Vista.Pilas.EditarPila.resources
