@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listas));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(21, 211);
+            this.label4.Location = new System.Drawing.Point(21, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 28);
             this.label4.TabIndex = 3;
@@ -110,7 +110,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(21, 243);
+            this.label5.Location = new System.Drawing.Point(21, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 28);
             this.label5.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(21, 289);
+            this.label6.Location = new System.Drawing.Point(21, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 28);
             this.label6.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(21, 320);
+            this.label7.Location = new System.Drawing.Point(21, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 28);
             this.label7.TabIndex = 6;
@@ -147,28 +147,28 @@
             // 
             // txtEditorial
             // 
-            this.txtEditorial.Location = new System.Drawing.Point(103, 248);
+            this.txtEditorial.Location = new System.Drawing.Point(103, 232);
             this.txtEditorial.Name = "txtEditorial";
             this.txtEditorial.Size = new System.Drawing.Size(121, 23);
             this.txtEditorial.TabIndex = 14;
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(103, 218);
+            this.txtAuthor.Location = new System.Drawing.Point(103, 202);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(121, 23);
             this.txtAuthor.TabIndex = 15;
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(103, 296);
+            this.txtGenero.Location = new System.Drawing.Point(103, 261);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(121, 23);
             this.txtGenero.TabIndex = 16;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(103, 327);
+            this.txtPrecio.Location = new System.Drawing.Point(103, 292);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 23);
             this.txtPrecio.TabIndex = 17;
@@ -218,7 +218,7 @@
             this.dataGridViewTextBoxColumn1,
             this.Btn_Editar,
             this.Eliminar});
-            this.dtgvMangas.Location = new System.Drawing.Point(241, 32);
+            this.dtgvMangas.Location = new System.Drawing.Point(255, 38);
             this.dtgvMangas.Name = "dtgvMangas";
             this.dtgvMangas.RowTemplate.Height = 25;
             this.dtgvMangas.Size = new System.Drawing.Size(1086, 535);
@@ -277,13 +277,13 @@
             // Btn_Editar
             // 
             this.Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.NullValue = "Editar";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Fuchsia;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.NullValue = "Editar";
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Fuchsia;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Btn_Editar.DefaultCellStyle = dataGridViewCellStyle3;
             this.Btn_Editar.Frozen = true;
             this.Btn_Editar.HeaderText = "Editar";
             this.Btn_Editar.Name = "Btn_Editar";
@@ -294,13 +294,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            dataGridViewCellStyle2.NullValue = "Eliminar";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
-            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            dataGridViewCellStyle4.NullValue = "Eliminar";
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Blue;
+            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle4;
             this.Eliminar.Frozen = true;
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Name = "Eliminar";
@@ -329,7 +329,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAgregar.Location = new System.Drawing.Point(129, 356);
+            this.btnAgregar.Location = new System.Drawing.Point(129, 321);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(95, 33);
             this.btnAgregar.TabIndex = 20;
@@ -337,13 +337,13 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Areglos
+            // Listas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 618);
             this.Controls.Add(this.panel1);
-            this.Name = "Areglos";
+            this.Name = "Listas";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Areglos_Load);
             this.panel1.ResumeLayout(false);

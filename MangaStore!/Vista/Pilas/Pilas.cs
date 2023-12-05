@@ -161,21 +161,21 @@ namespace MangaStore_
             eliminarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(eliminarButtonColumn);
 
-            Mangas[] arreglo = _Intermedio.ObtenerPila();
+            Mangas[] manga = _Intermedio.ObtenerPila();
 
-            if (arreglo != null)
-                foreach (Mangas manga in arreglo)
+            if(manga!=null)
+
+            for (int i = 0; i<manga.Length && manga[i]!=null;i++)
                 {
-                    
-
-                    int rowIndex = dtgvMangas.Rows.Add();
-                    dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
-                    dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
-                    dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
-                    dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
-                    dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
-                    dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
-                    dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
+                  
+                        int rowIndex = dtgvMangas.Rows.Add();
+                    dtgvMangas.Rows[rowIndex].Cells[0].Value = manga[i].Id;
+                    dtgvMangas.Rows[rowIndex].Cells[1].Value = manga[i].Titulo;
+                    dtgvMangas.Rows[rowIndex].Cells[2].Value = manga[i].Tomo;
+                    dtgvMangas.Rows[rowIndex].Cells[3].Value = manga[i].Author;
+                    dtgvMangas.Rows[rowIndex].Cells[4].Value = manga[i].Editorial;
+                    dtgvMangas.Rows[rowIndex].Cells[5].Value = manga[i].Genereo;
+                    dtgvMangas.Rows[rowIndex].Cells[6].Value = manga[i].Precio;
                 }
         }
 

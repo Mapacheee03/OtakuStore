@@ -53,5 +53,30 @@ namespace MangaStore_.Vista
 
             this.Close();
         }
+
+        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y teclas de control (por ejemplo, borrar, retroceso)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números, coma (,) o punto (.)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // Permitir solo un punto o coma decimal
+            if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+//Crear una ecepcion para autor que solo permita letras 
