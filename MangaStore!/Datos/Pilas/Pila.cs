@@ -14,12 +14,14 @@ namespace MangaStore_.Datos.Pilas
         private int _cima, _AuxCima;
         private int _longitudPila = 999;
         private Mangas[] _listaPila;
+        private Mangas[] _auxPila;
 
         public Pila()
         {
 
             _cima = -1;
             _listaPila = new Mangas[_longitudPila];
+            _auxPila = new Mangas[_longitudPila];
         }
 
         public bool PilaVacia()
@@ -72,26 +74,47 @@ namespace MangaStore_.Datos.Pilas
             }
             else
             {
+                // Mover todos los elementos hacia abajo para dar espacio al nuevo elemento
+                for (int i = _cima; i >= 0; i--)
+                {
+                    _listaPila[i + 1] = _listaPila[i];
+                }
+
                 _cima++;
-                _listaPila[_cima] = valor;
+                _listaPila[0] = valor; // Agregar el nuevo elemento en la posición 0 (nueva cima)
                 return true;
             }
-
         }
-        public Mangas ExtraerElemento()
-        {
+       public Mangas ExtraerElemento()
+       {
             if (PilaVacia())
             {
-                // return _cima;
                 throw new InvalidOperationException("The stack is empty.");
             }
             else
             {
                 Mangas aux = _listaPila[_cima];
+                _auxPila[_AuxCima] = aux; // Almacena el elemento extraído en la pila auxiliar
+                _AuxCima++;
                 _cima--;
                 return aux;
             }
+       }
+
+    public void ReintegrarElementos()
+    {
+        while (_AuxCima > 0)
+        {
+            _cima++;
+            _listaPila[_cima] = _auxPila[_AuxCima - 1];
+            _AuxCima--;
         }
+    }
+
+    public void LimpiarAuxPila()
+    {
+        _AuxCima = 0;
+    }
         public bool LimpiarPila()
         {
             if (PilaVacia())
