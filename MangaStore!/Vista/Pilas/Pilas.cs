@@ -130,7 +130,7 @@ namespace MangaStore_
         private void btnCerrarForm_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+}
 
         public void RefrescarLista()
         {
