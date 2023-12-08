@@ -19,7 +19,7 @@ namespace MangaStore_
     public partial class Areglos : Form
     {
         ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
-        private int X=0;
+        private int X = 0;
         // Intermedio _Intermedio = new Intermedio();
         public Areglos()
         {
@@ -82,10 +82,15 @@ namespace MangaStore_
                     Genereo = txtGenero.Text,
                     Precio = precio,
                 };
-
+                //insera final
+                if (BRFinal.Checked==true) 
                 _ArregloLogica.insertarfinal(manga);
-                _ArregloLogica.insertarinicio(manga);
-                _ArregloLogica.InsertarEnMedio(manga);
+                //insera inicio
+                else if (BRInicio.Checked == true)
+                    _ArregloLogica.insertarinicio(manga);
+                //insera final
+                else if (BRMedio.Checked == true)
+                    _ArregloLogica.InsertarEnMedio(manga);
 
 
                 RefrescarLista();

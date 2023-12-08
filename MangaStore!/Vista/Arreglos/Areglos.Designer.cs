@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
             label1 = new Label();
             label2 = new Label();
@@ -57,6 +57,9 @@
             Eliminar = new DataGridViewButtonColumn();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
+            BRInicio = new RadioButton();
+            BRFinal = new RadioButton();
+            BRMedio = new RadioButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
             SuspendLayout();
@@ -188,6 +191,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(BRMedio);
+            panel1.Controls.Add(BRFinal);
+            panel1.Controls.Add(BRInicio);
             panel1.Controls.Add(dtgvMangas);
             panel1.Controls.Add(btnCerrarForm);
             panel1.Controls.Add(btnAgregar);
@@ -273,13 +279,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = Color.Yellow;
-            dataGridViewCellStyle11.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle11.NullValue = "Editar";
-            dataGridViewCellStyle11.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle1.NullValue = "Editar";
+            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -290,13 +296,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = Color.DarkRed;
-            dataGridViewCellStyle12.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle12.NullValue = "Eliminar";
-            dataGridViewCellStyle12.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle12.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.DarkRed;
+            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle2.NullValue = "Eliminar";
+            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -325,13 +331,48 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAgregar.ForeColor = SystemColors.Control;
-            btnAgregar.Location = new Point(129, 321);
+            btnAgregar.Location = new Point(29, 382);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(95, 33);
             btnAgregar.TabIndex = 20;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
+            // 
+            // BRInicio
+            // 
+            BRInicio.AutoSize = true;
+            BRInicio.Checked = true;
+            BRInicio.ForeColor = Color.White;
+            BRInicio.Location = new Point(29, 338);
+            BRInicio.Name = "BRInicio";
+            BRInicio.Size = new Size(54, 19);
+            BRInicio.TabIndex = 23;
+            BRInicio.TabStop = true;
+            BRInicio.Text = "Inicio";
+            BRInicio.UseVisualStyleBackColor = true;
+            // 
+            // BRFinal
+            // 
+            BRFinal.AutoSize = true;
+            BRFinal.ForeColor = Color.White;
+            BRFinal.Location = new Point(170, 338);
+            BRFinal.Name = "BRFinal";
+            BRFinal.Size = new Size(50, 19);
+            BRFinal.TabIndex = 24;
+            BRFinal.Text = "Final";
+            BRFinal.UseVisualStyleBackColor = true;
+            // 
+            // BRMedio
+            // 
+            BRMedio.AutoSize = true;
+            BRMedio.ForeColor = Color.White;
+            BRMedio.Location = new Point(103, 338);
+            BRMedio.Name = "BRMedio";
+            BRMedio.Size = new Size(59, 19);
+            BRMedio.TabIndex = 25;
+            BRMedio.Text = "Medio";
+            BRMedio.UseVisualStyleBackColor = true;
             // 
             // Areglos
             // 
@@ -376,5 +417,8 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewButtonColumn Btn_Editar;
         private DataGridViewButtonColumn Eliminar;
+        private RadioButton BRMedio;
+        private RadioButton BRFinal;
+        private RadioButton BRInicio;
     }
 }
