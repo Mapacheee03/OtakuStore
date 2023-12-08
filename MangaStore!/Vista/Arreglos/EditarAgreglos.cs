@@ -96,7 +96,7 @@ namespace MangaStore_.Vista
 
         private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;

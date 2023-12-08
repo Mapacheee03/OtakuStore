@@ -20,6 +20,7 @@ namespace MangaStore_
     {
 
         IntermediarioListas _IntermediarioListas = IntermediarioListas.Instancia;
+        private int X = 0;
 
         public Listas()
         {
@@ -28,7 +29,8 @@ namespace MangaStore_
 
         private void Areglos_Load(object sender, EventArgs e)
         {
-            RefrescarLista();
+            Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+            RefrescarLista(arreglo);
         }
 
         private void btnCerrarForm_Click(object sender, EventArgs e)
@@ -70,30 +72,30 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _IntermediarioListas.OptenerListas();
-
-                int x = 1;
-                if (manga1 != null)
+                if (BRFinal.Checked == true || BRInicio.Checked == true || BRMedio.Checked == true)
                 {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
+                    X++;
+                    Mangas manga = new Mangas
                     {
-                        x = ObtenerNuevoId();
-                    }
+                        Id = X,
+                        Titulo = txtTitulo.Text,
+                        Tomo = tomo,
+                        Author = txtAuthor.Text,
+                        Editorial = txtEditorial.Text,
+                        Genereo = txtGenero.Text,
+                        Precio = precio,
+                    };
+                    if (BRFinal.Checked == true)
+                        _IntermediarioListas.insertarLista(manga);
+                    else if (BRMedio.Checked == true)
+                        _IntermediarioListas.InsertarEnMedio(manga);
+                    else if (BRInicio.Checked == true)
+                        _IntermediarioListas.InsertarInicio(manga);
                 }
-
-                Mangas manga = new Mangas
-                {
-                    Id = x,
-                    Titulo = txtTitulo.Text,
-                    Tomo = tomo,
-                    Author = txtAuthor.Text,
-                    Editorial = txtEditorial.Text,
-                    Genereo = txtGenero.Text,
-                    Precio = precio,
-                };
-
-                _IntermediarioListas.insertarLista(manga);
-                RefrescarLista();
+                else
+                    MessageBox.Show($"seleccione alguna de las 3 casillas para poder realizar alguna busqueda");
+                Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+                RefrescarLista(arreglo);
             }
             catch (Exception ex)
             {
@@ -102,12 +104,7 @@ namespace MangaStore_
             }
         }
 
-        private int ObtenerNuevoId()
-        {
 
-            Random random = new Random();
-            return random.Next(1, 1000);
-        }
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -149,10 +146,11 @@ namespace MangaStore_
                             _IntermediarioListas.EliminarLitas(manga.Id);////cambiar esto
                     }
                 }
-                RefrescarLista();
+                Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+                RefrescarLista(arreglo);
             }
         }
-        public void RefrescarLista()
+        public void RefrescarLista(Mangas[] arreglo)
         {
             // Clear existing columns and rows
             dtgvMangas.Columns.Clear();
@@ -181,7 +179,7 @@ namespace MangaStore_
             eliminarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(eliminarButtonColumn);
 
-            Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+
             foreach (Mangas manga in arreglo)
             {
                 if (manga == null)
@@ -237,11 +235,52 @@ namespace MangaStore_
 
         private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (BRPrecio.Checked == true || BRTitulo.Checked == true)
+            {
+                if (BRPrecio.Checked = true)
+                    RefrescarLista(_IntermediarioListas.BuscarTitulo(txtBuscar.Text));
+                else
+                    RefrescarLista(_IntermediarioListas.BuscarPrecio(Convert.ToDouble(txtBuscar.Text)));
+            }
+            else
+                MessageBox.Show($"seleccione alguna de las dos casillas para poder realizar alguna busqueda");
+
+        }
+
+        private void btnDesendente_click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAsendente_click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnVaciar_Click(object sender, EventArgs e)
+        {
+            _IntermediarioListas.vaciarLista();
+            Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+            RefrescarLista(arreglo);
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Mangas[] arreglo = _IntermediarioListas.OptenerListas();
+            RefrescarLista(arreglo);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

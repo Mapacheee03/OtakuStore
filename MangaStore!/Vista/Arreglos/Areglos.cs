@@ -10,6 +10,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace MangaStore_
     public partial class Areglos : Form
     {
         ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
-
+        private int X = 0;
         // Intermedio _Intermedio = new Intermedio();
         public Areglos()
         {
@@ -28,7 +29,8 @@ namespace MangaStore_
 
         private void Areglos_Load(object sender, EventArgs e)
         {
-            RefrescarLista();
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
         }
 
         private void btnCerrarForm_Click(object sender, EventArgs e)
@@ -70,32 +72,34 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _ArregloLogica.ObtenerAreglo();
-
-                int x = 1;
-                if (manga1 != null)
+                if (BRFinal.Checked == true || BRInicio.Checked == true || BRMedio.Checked == true)
                 {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
+                    X++;
+                    Mangas manga = new Mangas
                     {
-                        x = ObtenerNuevoId();
-                    }
+                        Id = X,
+                        Titulo = txtTitulo.Text,
+                        Tomo = tomo,
+                        Author = txtAuthor.Text,
+                        Editorial = txtEditorial.Text,
+                        Genereo = txtGenero.Text,
+                        Precio = precio,
+                    };
+                    //insera final
+                    if (BRFinal.Checked == true)
+                        _ArregloLogica.insertarfinal(manga);
+                    //insera inicio
+                    else if (BRInicio.Checked == true)
+                        _ArregloLogica.insertarinicio(manga);
+                    //insera MEdio
+                    else if (BRMedio.Checked == true)
+                        _ArregloLogica.InsertarEnMedio(manga);
                 }
+                else
+                    MessageBox.Show($"seleccione alguna de las 3 casillas para poder realizar alguna busqueda");
 
-                Mangas manga = new Mangas
-                {
-                    Id = x,
-                    Titulo = txtTitulo.Text,
-                    Tomo = tomo,
-                    Author = txtAuthor.Text,
-                    Editorial = txtEditorial.Text,
-                    Genereo = txtGenero.Text,
-                    Precio = precio,
-                };
-
-                _ArregloLogica.insertarAreglos(manga);
-
-
-                RefrescarLista();
+                Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+                RefrescarLista(arreglo);
             }
             catch (Exception ex)
             {
@@ -104,13 +108,7 @@ namespace MangaStore_
             }
         }
 
-        private int ObtenerNuevoId()
-        {
-            // Lógica para obtener un nuevo ID único
-            // Puedes utilizar alguna lógica similar a la proporcionada anteriormente
-            Random random = new Random();
-            return random.Next(1, 1000);
-        }
+
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -162,13 +160,14 @@ namespace MangaStore_
                         }
                     }
                 }
-                RefrescarLista();
+                Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+                RefrescarLista(arreglo);
 
             }
 
 
         }
-        public void RefrescarLista()
+        public void RefrescarLista(Mangas[] arreglo)
         {
             // Clear existing columns and rows
             dtgvMangas.Columns.Clear();
@@ -199,7 +198,7 @@ namespace MangaStore_
 
 
 
-            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+
 
             foreach (Mangas manga in arreglo)
             {
@@ -218,26 +217,6 @@ namespace MangaStore_
             }
 
 
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -286,6 +265,48 @@ namespace MangaStore_
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnDesendente_click(object sender, EventArgs e)
+        {
+            _ArregloLogica.Ordenar("des");
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
+        }
+
+        private void btnAsendente_click(object sender, EventArgs e)
+        {
+            _ArregloLogica.Ordenar("ase");
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (BRPrecio.Checked == true || BRTitulo.Checked == true)
+            {
+                if (BRPrecio.Checked = true)
+                    RefrescarLista(_ArregloLogica.BuscarTitulo(txtBuscar.Text));
+                else
+                    RefrescarLista(_ArregloLogica.BuscarPrecio(Convert.ToDouble(txtBuscar.Text)));
+            }
+            else
+                MessageBox.Show($"seleccione alguna de las dos casillas para poder realizar alguna busqueda");
+
+        }
+
+        private void btnVaciar_Click(object sender, EventArgs e)
+        {
+            _ArregloLogica.VaciaArreglo();
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
         }
     }
 }

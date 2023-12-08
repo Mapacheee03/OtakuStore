@@ -74,39 +74,36 @@ namespace MangaStore_.Datos.Areglos
             {
                 if (_Mangas[i] != null && _Mangas[i].Id == mangas.Id)
                 {
-                    _Mangas[i].Id = mangas.Id;
-                    _Mangas[i].Titulo = mangas.Titulo;
-                    _Mangas[i].Tomo = mangas.Tomo;
-                    _Mangas[i].Author = mangas.Author;
-                    _Mangas[i].Editorial = mangas.Editorial;
-                    _Mangas[i].Genereo = mangas.Genereo;
-                    _Mangas[i].Precio = mangas.Precio;
+                    _Mangas[i]= mangas;
+                  
                     break;
                 }
             }
         }
         public void EliminarDatos(int Id)
         {
-            for (int i = 0; i <= Cont; i++)
+            int Borarr = 0;
+            for (int x = 0; x <= Cont; x++)
             {
-                if (_Mangas[i] != null && Id == _Mangas[i].Id)
+                if (_Mangas[x].Id == Id)
                 {
-                    
-                    for (int j = i; j < Cont - 1; j++)
-                        _Mangas[j] = _Mangas[j + 1];
-                    
-                    _Mangas[Cont] = null;
-                    Cont--;
+                    _Mangas[x] = null;
+                    Borarr = x;
                     break;
                 }
             }
+            for (int x = Borarr; x <= Cont; x++)
+            {
+                _Mangas[x] = _Mangas[x + 1];
+            }
+            Cont--;
         }
         public Mangas[] ObtenerAreglo()
         {
             return _Mangas; 
         }
 
-        public void ordenar(string ordenamionto) {
+        public void Ordenar(string ordenamionto) {
             if (_Mangas != null && Cont >= 0 && Cont <= _Mangas.Length)
             {
                 int j;
@@ -115,12 +112,22 @@ namespace MangaStore_.Datos.Areglos
                 {
                     auxiliar = _Mangas[i];
                     j = i - 1;
-                    while (j >= 0 && auxiliar.Precio > _Mangas[j].Precio)
+                    if (ordenamionto == "des")
                     {
-                        _Mangas[j + 1] = _Mangas[j];
-                        j--;
+                        while (j >= 0 && auxiliar.Precio > _Mangas[j].Precio)
+                        {
+                            _Mangas[j + 1] = _Mangas[j];
+                            j--;
+                        }
                     }
-
+                    else if (ordenamionto == "ase")
+                    {
+                        while (j >= 0 && auxiliar.Precio < _Mangas[j].Precio)
+                        {
+                            _Mangas[j + 1] = _Mangas[j];
+                            j--;
+                        }
+                    }
                    
                     if (j + 1 < Cont)
                     {
