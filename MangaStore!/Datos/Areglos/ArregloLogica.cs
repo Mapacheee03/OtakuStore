@@ -1,4 +1,4 @@
-﻿
+
 using MangaStore_.Modelos;
 using System;
 using System.Collections.Generic;
@@ -26,18 +26,47 @@ namespace MangaStore_.Datos.Areglos
                 return _instanciaAtreglo;
             }
         }
-
-        public void insertarAreglos(Mangas _manga)
+        public void insertarfinal(Mangas _manga)
         {
             Cont++;
-            _Mangas[Cont] = new Mangas();
-            _Mangas[Cont].Id = _manga.Id;
-            _Mangas[Cont].Titulo = _manga.Titulo;
-            _Mangas[Cont].Tomo = _manga.Tomo;
-            _Mangas[Cont].Author = _manga.Author;
-            _Mangas[Cont].Editorial = _manga.Editorial;
-            _Mangas[Cont].Genereo = _manga.Genereo;
-            _Mangas[Cont].Precio = _manga.Precio;
+            _Mangas[Cont] = _manga;
+        }
+        public void insertarinicio(Mangas _manga)
+        {
+            Cont++;
+            if (Cont >= 1)
+            {
+                for (int i = Cont + 1; i > 0; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+            }
+            _Mangas[0] = _manga;
+
+        }
+        public void InsertarEnMedio(Mangas _manga)
+        {
+            Cont++;
+
+            if (Cont % 2 == 0)
+            {
+                
+                for (int i = Cont; i > Cont / 2; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+                _Mangas[Cont / 2] = _manga;
+            }
+            else
+            {
+         
+                int posicionMedio = Cont / 2;
+                for (int i = Cont; i > posicionMedio; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+                _Mangas[posicionMedio] = _manga;
+            }
         }
         public void Actualizardatos(Mangas mangas)
         {
@@ -77,5 +106,28 @@ namespace MangaStore_.Datos.Areglos
             return _Mangas; 
         }
 
+        public void ordenar(string ordenamionto) {
+            if (_Mangas != null && Cont >= 0 && Cont <= _Mangas.Length)
+            {
+                int j;
+                Mangas auxiliar;
+                for (int i = 0; i <= Cont; i++)  // Ajuste aquí
+                {
+                    auxiliar = _Mangas[i];
+                    j = i - 1;
+                    while (j >= 0 && auxiliar.Precio > _Mangas[j].Precio)
+                    {
+                        _Mangas[j + 1] = _Mangas[j];
+                        j--;
+                    }
+
+                   
+                    if (j + 1 < Cont)
+                    {
+                        _Mangas[j + 1] = auxiliar;
+                    }
+                }
+            }
+        }
     }
 }
