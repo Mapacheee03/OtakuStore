@@ -63,7 +63,7 @@ namespace MangaStore_.Vista.Colas
 
                 Mangas manga = new Mangas
                 {
-                    Id = x,
+                    Id = X,
                     Titulo = txtTitulo.Text,
                     Tomo = tomo,
                     Author = txtAuthor.Text,

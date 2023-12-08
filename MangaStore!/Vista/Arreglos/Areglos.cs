@@ -212,6 +212,58 @@ namespace MangaStore_
 
 
         }
+        public void RefrescarLista2(Mangas[] arreglo)
+        {
+            // Clear existing columns and rows
+            dtgvMangas.Columns.Clear();
+            dtgvMangas.Rows.Clear();
+
+            // Add columns programmatically
+            dtgvMangas.Columns.Add("Id", "ID");
+            dtgvMangas.Columns.Add("Titulo", "Title");
+            dtgvMangas.Columns.Add("Tomo", "Volume");
+            dtgvMangas.Columns.Add("Author", "Author");
+            dtgvMangas.Columns.Add("Editorial", "Editorial");
+            dtgvMangas.Columns.Add("Genero", "Genre");
+            dtgvMangas.Columns.Add("Precio", "Price");
+
+            // Editar
+            DataGridViewButtonColumn editarButtonColumn = new DataGridViewButtonColumn();
+            editarButtonColumn.HeaderText = "Editar";
+            editarButtonColumn.Text = "Editar";
+            editarButtonColumn.UseColumnTextForButtonValue = true;
+            dtgvMangas.Columns.Add(editarButtonColumn);
+
+            // Eliminar
+            DataGridViewButtonColumn eliminarButtonColumn = new DataGridViewButtonColumn();
+            eliminarButtonColumn.HeaderText = "Eliminar";
+            eliminarButtonColumn.Text = "Eliminar";
+            eliminarButtonColumn.UseColumnTextForButtonValue = true;
+            dtgvMangas.Columns.Add(eliminarButtonColumn);
+
+
+
+
+
+            foreach (Mangas manga in arreglo)
+            {
+                if (manga == null)
+                    break;
+
+                int rowIndex = dtgvMangas.Rows.Add();
+
+                dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
+                dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
+                dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
+                dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
+                dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
+                dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
+                dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
+            }
+
+
+
+        }
 
         private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -270,6 +322,20 @@ namespace MangaStore_
         {
             _ArregloLogica.Ordenar("ase");
             RefrescarLista();
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (BRPrecio.Checked == true || BRTitulo.Checked == true)
+            {
+                if (BRPrecio.Checked = true)
+                    RefrescarLista2(_ArregloLogica.BuscarTitulo(txtBuscar.Text));
+                else
+                    RefrescarLista2(_ArregloLogica.BuscarPrecio(Convert.ToDouble(txtBuscar.Text)));
+            }
+            else
+                MessageBox.Show($"seleccione alguna de las dos casillas para poder realizar alguna busqueda");
 
         }
     }

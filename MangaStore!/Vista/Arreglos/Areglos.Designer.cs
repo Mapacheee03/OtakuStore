@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
             label1 = new Label();
             label2 = new Label();
@@ -45,6 +45,14 @@
             txtPrecio = new TextBox();
             txtTitulo = new TextBox();
             panel1 = new Panel();
+            BRPrecio = new RadioButton();
+            BRTitulo = new RadioButton();
+            button3 = new Button();
+            txtBuscar = new TextBox();
+            label9 = new Label();
+            button2 = new Button();
+            label8 = new Label();
+            button1 = new Button();
             BRMedio = new RadioButton();
             BRFinal = new RadioButton();
             BRInicio = new RadioButton();
@@ -60,9 +68,6 @@
             Eliminar = new DataGridViewButtonColumn();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
-            button1 = new Button();
-            label8 = new Label();
-            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
             SuspendLayout();
@@ -72,7 +77,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(11, 50);
+            label1.Location = new Point(8, 68);
             label1.Name = "label1";
             label1.Size = new Size(227, 37);
             label1.TabIndex = 0;
@@ -194,6 +199,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(BRPrecio);
+            panel1.Controls.Add(BRTitulo);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(txtBuscar);
+            panel1.Controls.Add(label9);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(button1);
@@ -221,6 +231,98 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1370, 618);
             panel1.TabIndex = 20;
+            // 
+            // BRPrecio
+            // 
+            BRPrecio.AutoSize = true;
+            BRPrecio.ForeColor = Color.White;
+            BRPrecio.Location = new Point(601, 43);
+            BRPrecio.Name = "BRPrecio";
+            BRPrecio.Size = new Size(58, 19);
+            BRPrecio.TabIndex = 34;
+            BRPrecio.Text = "Precio";
+            BRPrecio.UseVisualStyleBackColor = true;
+            // 
+            // BRTitulo
+            // 
+            BRTitulo.AutoSize = true;
+            BRTitulo.Checked = true;
+            BRTitulo.ForeColor = Color.White;
+            BRTitulo.Location = new Point(527, 43);
+            BRTitulo.Name = "BRTitulo";
+            BRTitulo.Size = new Size(55, 19);
+            BRTitulo.TabIndex = 33;
+            BRTitulo.TabStop = true;
+            BRTitulo.Text = "Titulo";
+            BRTitulo.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.Control;
+            button3.Location = new Point(710, 9);
+            button3.Name = "button3";
+            button3.Size = new Size(95, 33);
+            button3.TabIndex = 31;
+            button3.Text = "Buscar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += btnBuscar_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(527, 14);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(177, 23);
+            txtBuscar.TabIndex = 30;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.Transparent;
+            label9.Location = new Point(445, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(68, 28);
+            label9.TabIndex = 29;
+            label9.Text = "Buscar";
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.Control;
+            button2.Location = new Point(125, 507);
+            button2.Name = "button2";
+            button2.Size = new Size(110, 33);
+            button2.TabIndex = 28;
+            button2.Text = "Asendente";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btnAsendente_click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.Transparent;
+            label8.Location = new Point(0, 448);
+            label8.Name = "label8";
+            label8.Size = new Size(189, 37);
+            label8.TabIndex = 27;
+            label8.Text = "Ordenamiento";
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.Control;
+            button1.Location = new Point(11, 507);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 33);
+            button1.TabIndex = 26;
+            button1.Text = "Desendente ";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnDesendente_click;
             // 
             // BRMedio
             // 
@@ -261,10 +363,10 @@
             // 
             dtgvMangas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Manga_Id, Manga_Titulo, Manga_Tomo, Manga_Author, Manga_Editorial, Manga_Genero, dataGridViewTextBoxColumn1, Btn_Editar, Eliminar });
-            dtgvMangas.Location = new Point(241, 32);
+            dtgvMangas.Location = new Point(241, 68);
             dtgvMangas.Name = "dtgvMangas";
             dtgvMangas.RowTemplate.Height = 25;
-            dtgvMangas.Size = new Size(1086, 535);
+            dtgvMangas.Size = new Size(1086, 499);
             dtgvMangas.TabIndex = 22;
             dtgvMangas.CellContentClick += dgv_CeldaClick;
             // 
@@ -320,13 +422,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = Color.Yellow;
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle7.NullValue = "Editar";
-            dataGridViewCellStyle7.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Yellow;
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle3.NullValue = "Editar";
+            dataGridViewCellStyle3.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle3;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -337,13 +439,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = Color.DarkRed;
-            dataGridViewCellStyle8.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle8.NullValue = "Eliminar";
-            dataGridViewCellStyle8.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.DarkRed;
+            dataGridViewCellStyle4.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle4.NullValue = "Eliminar";
+            dataGridViewCellStyle4.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle4;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -379,43 +481,6 @@
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(11, 507);
-            button1.Name = "button1";
-            button1.Size = new Size(113, 33);
-            button1.TabIndex = 26;
-            button1.Text = "Desendente ";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += btnDesendente_click;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.Transparent;
-            label8.Location = new Point(0, 448);
-            label8.Name = "label8";
-            label8.Size = new Size(189, 37);
-            label8.TabIndex = 27;
-            label8.Text = "Ordenamiento";
-            // 
-            // button2
-            // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(125, 507);
-            button2.Name = "button2";
-            button2.Size = new Size(110, 33);
-            button2.TabIndex = 28;
-            button2.Text = "Asendente";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += btnAsendente_click;
             // 
             // Areglos
             // 
@@ -466,5 +531,10 @@
         private Label label8;
         private Button button1;
         private Button button2;
+        private Button button3;
+        public TextBox txtBuscar;
+        private Label label9;
+        private RadioButton BRPrecio;
+        private RadioButton BRTitulo;
     }
 }

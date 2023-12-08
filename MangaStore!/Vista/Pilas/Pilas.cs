@@ -96,7 +96,7 @@ namespace MangaStore_
             {
                 X++;
 
-
+                
 
                 Mangas manga = new Mangas
                 {
@@ -111,7 +111,7 @@ namespace MangaStore_
 
                 // Agrega fila
                 _Intermedio.insertarAreglos(manga);
-                manga1 = _Intermedio.ObtenerPila();
+                var manga1 = _Intermedio.ObtenerPila();
                 RefrescarLista();
             }
             catch (Exception ex)
