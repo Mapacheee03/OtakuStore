@@ -83,8 +83,8 @@ namespace MangaStore_
                     Precio = precio,
                 };
                 //insera final
-                if (BRFinal.Checked==true) 
-                _ArregloLogica.insertarfinal(manga);
+                if (BRFinal.Checked == true)
+                    _ArregloLogica.insertarfinal(manga);
                 //insera inicio
                 else if (BRInicio.Checked == true)
                     _ArregloLogica.insertarinicio(manga);
@@ -102,13 +102,7 @@ namespace MangaStore_
             }
         }
 
-        private int ObtenerNuevoId()
-        {
-            // Lógica para obtener un nuevo ID único
-            // Puedes utilizar alguna lógica similar a la proporcionada anteriormente
-            Random random = new Random();
-            return random.Next(1, 1000);
-        }
+
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -264,6 +258,19 @@ namespace MangaStore_
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnDesendente_click(object sender, EventArgs e)
+        {
+            _ArregloLogica.Ordenar("des");
+            RefrescarLista();
+        }
+
+        private void btnAsendente_click(object sender, EventArgs e)
+        {
+            _ArregloLogica.Ordenar("ase");
+            RefrescarLista();
+
         }
     }
 }

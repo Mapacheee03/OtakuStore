@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
             label1 = new Label();
             label2 = new Label();
@@ -45,6 +45,9 @@
             txtPrecio = new TextBox();
             txtTitulo = new TextBox();
             panel1 = new Panel();
+            BRMedio = new RadioButton();
+            BRFinal = new RadioButton();
+            BRInicio = new RadioButton();
             dtgvMangas = new DataGridView();
             Manga_Id = new DataGridViewTextBoxColumn();
             Manga_Titulo = new DataGridViewTextBoxColumn();
@@ -57,9 +60,9 @@
             Eliminar = new DataGridViewButtonColumn();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
-            BRInicio = new RadioButton();
-            BRFinal = new RadioButton();
-            BRMedio = new RadioButton();
+            button1 = new Button();
+            label8 = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).BeginInit();
             SuspendLayout();
@@ -191,6 +194,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(BRMedio);
             panel1.Controls.Add(BRFinal);
             panel1.Controls.Add(BRInicio);
@@ -215,6 +221,41 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1370, 618);
             panel1.TabIndex = 20;
+            // 
+            // BRMedio
+            // 
+            BRMedio.AutoSize = true;
+            BRMedio.ForeColor = Color.White;
+            BRMedio.Location = new Point(103, 338);
+            BRMedio.Name = "BRMedio";
+            BRMedio.Size = new Size(59, 19);
+            BRMedio.TabIndex = 25;
+            BRMedio.Text = "Medio";
+            BRMedio.UseVisualStyleBackColor = true;
+            // 
+            // BRFinal
+            // 
+            BRFinal.AutoSize = true;
+            BRFinal.ForeColor = Color.White;
+            BRFinal.Location = new Point(170, 338);
+            BRFinal.Name = "BRFinal";
+            BRFinal.Size = new Size(50, 19);
+            BRFinal.TabIndex = 24;
+            BRFinal.Text = "Final";
+            BRFinal.UseVisualStyleBackColor = true;
+            // 
+            // BRInicio
+            // 
+            BRInicio.AutoSize = true;
+            BRInicio.Checked = true;
+            BRInicio.ForeColor = Color.White;
+            BRInicio.Location = new Point(29, 338);
+            BRInicio.Name = "BRInicio";
+            BRInicio.Size = new Size(54, 19);
+            BRInicio.TabIndex = 23;
+            BRInicio.TabStop = true;
+            BRInicio.Text = "Inicio";
+            BRInicio.UseVisualStyleBackColor = true;
             // 
             // dtgvMangas
             // 
@@ -279,13 +320,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle1.NullValue = "Editar";
-            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = Color.Yellow;
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle7.NullValue = "Editar";
+            dataGridViewCellStyle7.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle7;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -296,13 +337,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle2.NullValue = "Eliminar";
-            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = Color.DarkRed;
+            dataGridViewCellStyle8.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle8.NullValue = "Eliminar";
+            dataGridViewCellStyle8.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle8.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle8;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -339,40 +380,42 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // BRInicio
+            // button1
             // 
-            BRInicio.AutoSize = true;
-            BRInicio.Checked = true;
-            BRInicio.ForeColor = Color.White;
-            BRInicio.Location = new Point(29, 338);
-            BRInicio.Name = "BRInicio";
-            BRInicio.Size = new Size(54, 19);
-            BRInicio.TabIndex = 23;
-            BRInicio.TabStop = true;
-            BRInicio.Text = "Inicio";
-            BRInicio.UseVisualStyleBackColor = true;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.Control;
+            button1.Location = new Point(11, 507);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 33);
+            button1.TabIndex = 26;
+            button1.Text = "Desendente ";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnDesendente_click;
             // 
-            // BRFinal
+            // label8
             // 
-            BRFinal.AutoSize = true;
-            BRFinal.ForeColor = Color.White;
-            BRFinal.Location = new Point(170, 338);
-            BRFinal.Name = "BRFinal";
-            BRFinal.Size = new Size(50, 19);
-            BRFinal.TabIndex = 24;
-            BRFinal.Text = "Final";
-            BRFinal.UseVisualStyleBackColor = true;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.Transparent;
+            label8.Location = new Point(0, 448);
+            label8.Name = "label8";
+            label8.Size = new Size(189, 37);
+            label8.TabIndex = 27;
+            label8.Text = "Ordenamiento";
             // 
-            // BRMedio
+            // button2
             // 
-            BRMedio.AutoSize = true;
-            BRMedio.ForeColor = Color.White;
-            BRMedio.Location = new Point(103, 338);
-            BRMedio.Name = "BRMedio";
-            BRMedio.Size = new Size(59, 19);
-            BRMedio.TabIndex = 25;
-            BRMedio.Text = "Medio";
-            BRMedio.UseVisualStyleBackColor = true;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.Control;
+            button2.Location = new Point(125, 507);
+            button2.Name = "button2";
+            button2.Size = new Size(110, 33);
+            button2.TabIndex = 28;
+            button2.Text = "Asendente";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btnAsendente_click;
             // 
             // Areglos
             // 
@@ -420,5 +463,8 @@
         private RadioButton BRMedio;
         private RadioButton BRFinal;
         private RadioButton BRInicio;
+        private Label label8;
+        private Button button1;
+        private Button button2;
     }
 }
