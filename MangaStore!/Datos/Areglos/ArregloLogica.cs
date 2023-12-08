@@ -26,18 +26,23 @@ namespace MangaStore_.Datos.Areglos
                 return _instanciaAtreglo;
             }
         }
-
-        public void insertarAreglos(Mangas _manga)
+        public void insertarfinal(Mangas _manga)
         {
             Cont++;
-            _Mangas[Cont] = new Mangas();
-            _Mangas[Cont].Id = _manga.Id;
-            _Mangas[Cont].Titulo = _manga.Titulo;
-            _Mangas[Cont].Tomo = _manga.Tomo;
-            _Mangas[Cont].Author = _manga.Author;
-            _Mangas[Cont].Editorial = _manga.Editorial;
-            _Mangas[Cont].Genereo = _manga.Genereo;
-            _Mangas[Cont].Precio = _manga.Precio;
+            _Mangas[Cont] = _manga;
+        }
+        public void insertarinicio(Mangas _manga)
+        {
+            Cont++;
+            if (Cont >= 1)
+            {
+                for (int i = Cont + 1; i > 0; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+            }
+            _Mangas[0] = _manga;
+
         }
         public void Actualizardatos(Mangas mangas)
         {
