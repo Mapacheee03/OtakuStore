@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Vista\Colas\Cola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Colas\EditarCola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Creadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Arreglos\EditarAgreglos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Pilas\EditarPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vista\Pilas\Pilas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
