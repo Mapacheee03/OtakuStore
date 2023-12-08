@@ -44,6 +44,30 @@ namespace MangaStore_.Datos.Areglos
             _Mangas[0] = _manga;
 
         }
+        public void InsertarEnMedio(Mangas _manga)
+        {
+            Cont++;
+
+            if (Cont % 2 == 0)
+            {
+                
+                for (int i = Cont; i > Cont / 2; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+                _Mangas[Cont / 2] = _manga;
+            }
+            else
+            {
+         
+                int posicionMedio = Cont / 2;
+                for (int i = Cont; i > posicionMedio; i--)
+                {
+                    _Mangas[i] = _Mangas[i - 1];
+                }
+                _Mangas[posicionMedio] = _manga;
+            }
+        }
         public void Actualizardatos(Mangas mangas)
         {
             for (int i = 0; i <= Cont; i++)
@@ -82,5 +106,28 @@ namespace MangaStore_.Datos.Areglos
             return _Mangas; 
         }
 
+        public void ordenar(string ordenamionto) {
+            if (_Mangas != null && Cont >= 0 && Cont <= _Mangas.Length)
+            {
+                int j;
+                Mangas auxiliar;
+                for (int i = 0; i <= Cont; i++)  // Ajuste aquí
+                {
+                    auxiliar = _Mangas[i];
+                    j = i - 1;
+                    while (j >= 0 && auxiliar.Precio > _Mangas[j].Precio)
+                    {
+                        _Mangas[j + 1] = _Mangas[j];
+                        j--;
+                    }
+
+                   
+                    if (j + 1 < Cont)
+                    {
+                        _Mangas[j + 1] = auxiliar;
+                    }
+                }
+            }
+        }
     }
 }
