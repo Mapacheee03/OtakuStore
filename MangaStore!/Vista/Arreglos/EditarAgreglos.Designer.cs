@@ -57,6 +57,7 @@
             btnAgregar.TabIndex = 35;
             btnAgregar.Text = "Editar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += Click_Editar;
             // 
             // txtTitulo
             // 
@@ -228,6 +229,7 @@
             Controls.Add(label3);
             Name = "EditarAgreglos";
             Text = "EditarAgreglos";
+            Load += EditarAgreglos_Load;
             ResumeLayout(false);
             PerformLayout();
         }
