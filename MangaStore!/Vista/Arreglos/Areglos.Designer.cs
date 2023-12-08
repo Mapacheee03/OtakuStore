@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
             label1 = new Label();
             label2 = new Label();
@@ -45,6 +45,8 @@
             txtPrecio = new TextBox();
             txtTitulo = new TextBox();
             panel1 = new Panel();
+            button5 = new Button();
+            button4 = new Button();
             BRPrecio = new RadioButton();
             BRTitulo = new RadioButton();
             button3 = new Button();
@@ -199,6 +201,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
             panel1.Controls.Add(BRPrecio);
             panel1.Controls.Add(BRTitulo);
             panel1.Controls.Add(button3);
@@ -231,6 +235,32 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1370, 618);
             panel1.TabIndex = 20;
+            // 
+            // button5
+            // 
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button5.ForeColor = SystemColors.Control;
+            button5.Location = new Point(103, 14);
+            button5.Name = "button5";
+            button5.Size = new Size(95, 33);
+            button5.TabIndex = 36;
+            button5.Text = "Refrescar";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += btnRefrescar_Click;
+            // 
+            // button4
+            // 
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.Control;
+            button4.Location = new Point(1014, 14);
+            button4.Name = "button4";
+            button4.Size = new Size(95, 33);
+            button4.TabIndex = 35;
+            button4.Text = "Vaciar";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += btnVaciar_Click;
             // 
             // BRPrecio
             // 
@@ -422,13 +452,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.Yellow;
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle3.NullValue = "Editar";
-            dataGridViewCellStyle3.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle1.NullValue = "Editar";
+            dataGridViewCellStyle1.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle1;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -439,13 +469,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.DarkRed;
-            dataGridViewCellStyle4.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle4.NullValue = "Eliminar";
-            dataGridViewCellStyle4.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.DarkRed;
+            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle2.NullValue = "Eliminar";
+            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -536,5 +566,7 @@
         private Label label9;
         private RadioButton BRPrecio;
         private RadioButton BRTitulo;
+        private Button button4;
+        private Button button5;
     }
 }

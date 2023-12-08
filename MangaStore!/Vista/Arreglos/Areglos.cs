@@ -10,6 +10,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,27 +72,31 @@ namespace MangaStore_
 
             try
             {
-
-                X++;
-                Mangas manga = new Mangas
+                if (BRFinal.Checked == true || BRInicio.Checked == true || BRMedio.Checked == true)
                 {
-                    Id = X,
-                    Titulo = txtTitulo.Text,
-                    Tomo = tomo,
-                    Author = txtAuthor.Text,
-                    Editorial = txtEditorial.Text,
-                    Genereo = txtGenero.Text,
-                    Precio = precio,
-                };
-                //insera final
-                if (BRFinal.Checked == true)
-                    _ArregloLogica.insertarfinal(manga);
-                //insera inicio
-                else if (BRInicio.Checked == true)
-                    _ArregloLogica.insertarinicio(manga);
-                //insera final
-                else if (BRMedio.Checked == true)
-                    _ArregloLogica.InsertarEnMedio(manga);
+                    X++;
+                    Mangas manga = new Mangas
+                    {
+                        Id = X,
+                        Titulo = txtTitulo.Text,
+                        Tomo = tomo,
+                        Author = txtAuthor.Text,
+                        Editorial = txtEditorial.Text,
+                        Genereo = txtGenero.Text,
+                        Precio = precio,
+                    };
+                    //insera final
+                    if (BRFinal.Checked == true)
+                        _ArregloLogica.insertarfinal(manga);
+                    //insera inicio
+                    else if (BRInicio.Checked == true)
+                        _ArregloLogica.insertarinicio(manga);
+                    //insera MEdio
+                    else if (BRMedio.Checked == true)
+                        _ArregloLogica.InsertarEnMedio(manga);
+                }
+                else
+                    MessageBox.Show($"seleccione alguna de las 3 casillas para poder realizar alguna busqueda");
 
                 Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
                 RefrescarLista(arreglo);
@@ -193,7 +198,7 @@ namespace MangaStore_
 
 
 
-          
+
 
             foreach (Mangas manga in arreglo)
             {
@@ -214,7 +219,7 @@ namespace MangaStore_
 
 
         }
-       
+
         private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -289,6 +294,19 @@ namespace MangaStore_
             else
                 MessageBox.Show($"seleccione alguna de las dos casillas para poder realizar alguna busqueda");
 
+        }
+
+        private void btnVaciar_Click(object sender, EventArgs e)
+        {
+            _ArregloLogica.VaciaArreglo();
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            Mangas[] arreglo = _ArregloLogica.ObtenerAreglo();
+            RefrescarLista(arreglo);
         }
     }
 }
