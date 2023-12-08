@@ -18,6 +18,7 @@ namespace MangaStore_.Vista.Colas
     {
         private Intermeriatiocolas _Intermedio = Intermeriatiocolas.Instancia;
         int rowIndex;
+        private int X = 0;
         public Cola()
         {
             InitializeComponent();
@@ -58,14 +59,7 @@ namespace MangaStore_.Vista.Colas
             {
                 Mangas[] manga1 = _Intermedio.ObtenerAreglo();
 
-                int x = 1;
-                if (manga1 != null)
-                {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
-                    {
-                        x = ObtenerNuevoId();
-                    }
-                }
+                X++;
 
                 Mangas manga = new Mangas
                 {

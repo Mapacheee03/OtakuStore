@@ -19,6 +19,7 @@ namespace MangaStore_
         private Intermeriatiopilas _Intermedio = Intermeriatiopilas.Instancia;
         // Intermedio _Intermedio = new Intermedio();
         int rowIndex;
+        private int X = 0;
         public Pilas()
         {
             InitializeComponent();
@@ -93,22 +94,13 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _Intermedio.ObtenerPila();
-
-                int x = 1;
-                if (manga1 != null)
-                {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
-                    {
-                        x = ObtenerNuevoId();
-                    }
-                }
+                X++;
 
 
 
                 Mangas manga = new Mangas
                 {
-                    Id = x,
+                    Id = X,
                     Titulo = txtTitulo.Text,
                     Tomo = tomo,
                     Author = txtAuthor.Text,

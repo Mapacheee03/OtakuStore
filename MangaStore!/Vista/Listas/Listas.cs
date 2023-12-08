@@ -20,6 +20,7 @@ namespace MangaStore_
     {
 
         IntermediarioListas _IntermediarioListas = IntermediarioListas.Instancia;
+        private int X = 0;
 
         public Listas()
         {
@@ -70,20 +71,11 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _IntermediarioListas.OptenerListas();
 
-                int x = 1;
-                if (manga1 != null)
-                {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
-                    {
-                        x = ObtenerNuevoId();
-                    }
-                }
-
+                X++;
                 Mangas manga = new Mangas
                 {
-                    Id = x,
+                    Id = X,
                     Titulo = txtTitulo.Text,
                     Tomo = tomo,
                     Author = txtAuthor.Text,
