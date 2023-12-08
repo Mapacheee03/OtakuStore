@@ -32,6 +32,15 @@ namespace MangaStore_.Datos.Listas
         {
             listas.InsertaNodo(manga);
         }
+        public void InsertarEnMedio(Mangas manga)
+        {
+            listas.InsertarMedio(manga);
+        }
+        public void InsertarInicio(Mangas manga)
+        {
+            listas.InsertarInicio(manga);
+        }
+
         public void EditarLitas(Mangas manga) {
             listas.Editar(manga);
         }
@@ -39,5 +48,17 @@ namespace MangaStore_.Datos.Listas
         {
             listas.Eliminar(_ID);
         }
+        public Mangas[] BuscarPrecio(double precio)
+        {
+            return listas.BuscarPrecio(precio);
+        }
+        public Mangas[] BuscarTitulo(string Titulo)
+        {
+            return listas.BuscarTitulo(Titulo);
+        }
+        public void vaciarLista() {
+            listas = new ListasLogica();
+        }
+
     }
 }

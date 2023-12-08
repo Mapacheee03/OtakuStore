@@ -2,6 +2,7 @@
 using MangaStore_.Modelos;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -136,5 +137,42 @@ namespace MangaStore_.Datos.Areglos
                 }
             }
         }
+
+        public Mangas[] BuscarTitulo(string titulo)
+        {
+            Mangas [] _auxiliar=new Mangas[_Mangas.Length];
+            int Z = 0;
+            for (int i = 0; i <= Cont; i++)
+            {
+                if (_Mangas[i] != null && _Mangas[i].Titulo ==titulo )
+                {
+                    _auxiliar[Z] = _Mangas[i];
+                        Z++;
+                   
+                }
+            }
+            return _auxiliar;
+        }
+
+        public Mangas[] BuscarPrecio(double precio)
+        {
+            Mangas[] _auxiliar = new Mangas[_Mangas.Length];
+            int Z = 0;
+            for (int i = 0; i <= Cont; i++)
+            {
+                if (_Mangas[i] != null && _Mangas[i].Precio == precio)
+                {
+                    _auxiliar[Z] = _Mangas[i];
+                    Z++;
+
+                }
+            }
+            return _auxiliar;
+        }
+
+        public void VaciaArreglo() {
+            _Mangas = new Mangas[90];
+        }
+
     }
 }
