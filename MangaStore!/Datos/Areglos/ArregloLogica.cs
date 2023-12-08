@@ -74,13 +74,8 @@ namespace MangaStore_.Datos.Areglos
             {
                 if (_Mangas[i] != null && _Mangas[i].Id == mangas.Id)
                 {
-                    _Mangas[i].Id = mangas.Id;
-                    _Mangas[i].Titulo = mangas.Titulo;
-                    _Mangas[i].Tomo = mangas.Tomo;
-                    _Mangas[i].Author = mangas.Author;
-                    _Mangas[i].Editorial = mangas.Editorial;
-                    _Mangas[i].Genereo = mangas.Genereo;
-                    _Mangas[i].Precio = mangas.Precio;
+                    _Mangas[i]= mangas;
+                  
                     break;
                 }
             }
