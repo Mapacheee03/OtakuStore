@@ -77,6 +77,32 @@ namespace MangaStore_.Vista
                 e.Handled = true;
             }
         }
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }
 //Crear una ecepcion para autor que solo permita letras 

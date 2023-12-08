@@ -17,7 +17,7 @@ namespace MangaStore_.Vista.Colas
     public partial class Cola : Form
     {
         private Intermeriatiocolas _Intermedio = Intermeriatiocolas.Instancia;
-
+        int rowIndex;
         public Cola()
         {
             InitializeComponent();
@@ -144,21 +144,21 @@ namespace MangaStore_.Vista.Colas
 
             Mangas[] arreglo = _Intermedio.ObtenerAreglo();
 
-            if(arreglo!=null)
-            foreach (Mangas manga in arreglo)
-            {
-                if (manga == null)
-                    break;
+            if (arreglo != null)
+                foreach (Mangas manga in arreglo)
+                {
+                    if (manga == null)
+                        break;
 
-                int rowIndex = dtgvMangas.Rows.Add();
-                dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
-                dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
-                dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
-                dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
-                dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
-                dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
-                dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
-            }
+                    int rowIndex = dtgvMangas.Rows.Add();
+                    dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
+                    dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
+                    dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
+                    dtgvMangas.Rows[rowIndex].Cells[3].Value = manga.Author;
+                    dtgvMangas.Rows[rowIndex].Cells[4].Value = manga.Editorial;
+                    dtgvMangas.Rows[rowIndex].Cells[5].Value = manga.Genereo;
+                    dtgvMangas.Rows[rowIndex].Cells[6].Value = manga.Precio;
+                }
         }
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
@@ -204,7 +204,7 @@ namespace MangaStore_.Vista.Colas
 
                         if (result == DialogResult.Yes)
                         {
-                            _Intermedio.EliminarDatos(manga.Id);
+                            // _Intermedio.EliminarDatos(manga.Id);
 
 
 
@@ -215,6 +215,43 @@ namespace MangaStore_.Vista.Colas
 
             }
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dtgvMangas.Rows.RemoveAt(rowIndex);
+
+        }
+
+
+
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnCerrarForm_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -87,6 +87,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(121, 23);
             txtTitulo.TabIndex = 50;
+            txtTitulo.KeyPress += TextUpDownTitulo_KeyPress;
             // 
             // label1
             // 
@@ -105,6 +106,7 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
             txtPrecio.TabIndex = 49;
+            txtPrecio.KeyPress += txtboxnumeros_KeyPress;
             // 
             // label6
             // 
@@ -141,6 +143,7 @@
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(121, 23);
             txtAuthor.TabIndex = 47;
+            txtAuthor.KeyPress += TextUpDownAuthor_KeyPress;
             // 
             // label4
             // 
@@ -159,6 +162,7 @@
             txtEditorial.Name = "txtEditorial";
             txtEditorial.Size = new Size(121, 23);
             txtEditorial.TabIndex = 46;
+            txtEditorial.KeyPress += TextUpDownEditorial_KeyPress;
             // 
             // label7
             // 
@@ -177,6 +181,7 @@
             txtTomo.Name = "txtTomo";
             txtTomo.Size = new Size(121, 23);
             txtTomo.TabIndex = 45;
+            txtTomo.KeyPress += numericUpDownTomo_KeyPress;
             // 
             // label5
             // 

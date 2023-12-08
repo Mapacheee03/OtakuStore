@@ -18,9 +18,9 @@ namespace MangaStore_
 {
     public partial class Listas : Form
     {
-     
-        IntermediarioListas _IntermediarioListas=IntermediarioListas.Instancia;
-        
+
+        IntermediarioListas _IntermediarioListas = IntermediarioListas.Instancia;
+
         public Listas()
         {
             InitializeComponent();
@@ -104,7 +104,7 @@ namespace MangaStore_
 
         private int ObtenerNuevoId()
         {
-          
+
             Random random = new Random();
             return random.Next(1, 1000);
         }
@@ -143,7 +143,7 @@ namespace MangaStore_
                     else
                     {
                         var result = MessageBox.Show($"Esta seguro de borar \"{manga.Titulo}\". ¿Deseas continuar?",
-                                      "Error",MessageBoxButtons.YesNo,MessageBoxIcon.Error);
+                                      "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
                         if (result == DialogResult.Yes)
                             _IntermediarioListas.EliminarLitas(manga.Id);////cambiar esto
@@ -173,7 +173,7 @@ namespace MangaStore_
             editarButtonColumn.Text = "Editar";
             editarButtonColumn.UseColumnTextForButtonValue = true;
             dtgvMangas.Columns.Add(editarButtonColumn);
-         
+
             // Eliminar
             DataGridViewButtonColumn eliminarButtonColumn = new DataGridViewButtonColumn();
             eliminarButtonColumn.HeaderText = "Eliminar";
@@ -187,7 +187,7 @@ namespace MangaStore_
                 if (manga == null)
                     break;
 
-                int rowIndex = dtgvMangas.Rows.Add(); 
+                int rowIndex = dtgvMangas.Rows.Add();
                 dtgvMangas.Rows[rowIndex].Cells[0].Value = manga.Id;
                 dtgvMangas.Rows[rowIndex].Cells[1].Value = manga.Titulo;
                 dtgvMangas.Rows[rowIndex].Cells[2].Value = manga.Tomo;
@@ -198,5 +198,50 @@ namespace MangaStore_
             }
         }
 
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

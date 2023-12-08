@@ -18,6 +18,7 @@ namespace MangaStore_
     {
         private Intermeriatiopilas _Intermedio = Intermeriatiopilas.Instancia;
         // Intermedio _Intermedio = new Intermedio();
+        int rowIndex;
         public Pilas()
         {
             InitializeComponent();
@@ -130,7 +131,7 @@ namespace MangaStore_
         private void btnCerrarForm_Click(object sender, EventArgs e)
         {
             this.Close();
-}
+        }
 
         public void RefrescarLista()
         {
@@ -163,12 +164,12 @@ namespace MangaStore_
 
             Mangas[] manga = _Intermedio.ObtenerPila();
 
-            if(manga!=null)
+            if (manga != null)
 
-            for (int i = 0; i<manga.Length && manga[i]!=null;i++)
+                for (int i = 0; i < manga.Length && manga[i] != null; i++)
                 {
-                  
-                        int rowIndex = dtgvMangas.Rows.Add();
+
+                    int rowIndex = dtgvMangas.Rows.Add();
                     dtgvMangas.Rows[rowIndex].Cells[0].Value = manga[i].Id;
                     dtgvMangas.Rows[rowIndex].Cells[1].Value = manga[i].Titulo;
                     dtgvMangas.Rows[rowIndex].Cells[2].Value = manga[i].Tomo;
@@ -222,7 +223,7 @@ namespace MangaStore_
 
                         if (result == DialogResult.Yes)
                         {
-                            _Intermedio.EliminarDatos(manga.Id);
+                            //_Intermedio.EliminarDatos(manga.Id);
 
 
 
@@ -234,6 +235,35 @@ namespace MangaStore_
             }
         }
 
-        
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dtgvMangas.Rows.RemoveAt(rowIndex);
+        }
     }
 }

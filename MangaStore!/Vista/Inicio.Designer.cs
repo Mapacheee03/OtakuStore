@@ -172,6 +172,7 @@
             btnManga.FlatStyle = FlatStyle.Flat;
             btnManga.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnManga.ForeColor = Color.Gainsboro;
+            btnManga.Image = (Image)resources.GetObject("btnManga.Image");
             btnManga.ImageAlign = ContentAlignment.MiddleLeft;
             btnManga.Location = new Point(0, 235);
             btnManga.Name = "btnManga";
@@ -212,6 +213,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(11, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(233, 190);
@@ -231,6 +233,7 @@
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(446, 194);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(204, 222);

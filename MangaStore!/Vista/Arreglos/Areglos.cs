@@ -114,7 +114,7 @@ namespace MangaStore_
 
         private void dgv_CeldaClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7 && e.RowIndex>=0 || e.ColumnIndex == 8 && e.RowIndex >= 0)
+            if (e.ColumnIndex == 7 && e.RowIndex >= 0 || e.ColumnIndex == 8 && e.RowIndex >= 0)
             {
                 DataGridViewButtonCell buttonCell;
                 Mangas manga = new Mangas
@@ -241,26 +241,48 @@ namespace MangaStore_
 
         }
 
-        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Permitir solo números y teclas de control (por ejemplo, borrar, retroceso)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            // Permitir solo números, coma (,) o punto (.)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
 
-            // Permitir solo un punto o coma decimal
             if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }

@@ -30,14 +30,7 @@ namespace MangaStore_.Datos.Pilas
         }
         public bool PilaLlena()
         {
-            if (_cima == _longitudPila - 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return _cima == _longitudPila - 1;
         }
         /// <summary>
         public int Cantidadpila()
@@ -82,10 +75,11 @@ namespace MangaStore_.Datos.Pilas
 
                 _cima++;
                 _listaPila[0] = valor; // Agregar el nuevo elemento en la posición 0 (nueva cima)
+                Console.WriteLine("Se añadió un nuevo elemento a la pila."); // Mostrar mensaje
                 return true;
             }
         }
-       public Mangas ExtraerElemento()
+        public Mangas ExtraerElemento()
        {
             if (PilaVacia())
             {
@@ -131,48 +125,11 @@ namespace MangaStore_.Datos.Pilas
                 return true;
             }
         }
-        public void EliminarDatos(int id)
-        {
-            if (_cima == -1)
-            {
-                Console.WriteLine("La pila está vacía. No se pueden eliminar elementos.");
-                return;
-            }
 
-            int elementoAEliminar = -1;
-
-            // Buscar el elemento con el ID proporcionado
-            for (int i = _cima; i >= 0; i--)
-            {
-                if (_listaPila[i] != null && id == _listaPila[i].Id)
-                {
-                    elementoAEliminar = i;
-                    break;
-                }
-            }
-
-            if (elementoAEliminar != -1)
-            {
-                // Eliminar el elemento encontrando, moviendo los elementos restantes hacia arriba en la pila
-                for (int i = elementoAEliminar; i < _cima; i++)
-                {
-                    _listaPila[i] = _listaPila[i + 1];
-                }
-
-                _listaPila[_cima] = null;
-                _cima--;
-                Console.WriteLine($"Elemento con ID {id} eliminado de la pila.");
-            }
-            else
-            {
-                Console.WriteLine($"Elemento con ID {id} no encontrado en la pila.");
-            }
-        }
-    
 
         public void ActualizarDatos(Mangas mangas)
         {
-                Pila pilaTemp = new Pila();
+            Pila pilaTemp = new Pila();
 
             while (!PilaVacia())
             {

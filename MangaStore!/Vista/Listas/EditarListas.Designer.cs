@@ -51,7 +51,7 @@
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnAgregar.ForeColor = SystemColors.Control;
-            btnAgregar.Location = new Point(207, 366);
+            btnAgregar.Location = new Point(207, 331);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(95, 33);
             btnAgregar.TabIndex = 35;
@@ -65,6 +65,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(121, 23);
             txtTitulo.TabIndex = 34;
+            txtTitulo.KeyPress += TextUpDownTitulo_KeyPress;
             // 
             // label1
             // 
@@ -79,17 +80,18 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(181, 337);
+            txtPrecio.Location = new Point(181, 302);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
             txtPrecio.TabIndex = 33;
+            txtPrecio.KeyPress += txtboxnumeros_KeyPress;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(71, 306);
+            label6.Location = new Point(71, 271);
             label6.Name = "label6";
             label6.Size = new Size(76, 28);
             label6.TabIndex = 27;
@@ -97,7 +99,7 @@
             // 
             // txtGenero
             // 
-            txtGenero.Location = new Point(181, 306);
+            txtGenero.Location = new Point(181, 271);
             txtGenero.Name = "txtGenero";
             txtGenero.Size = new Size(121, 23);
             txtGenero.TabIndex = 32;
@@ -107,7 +109,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(71, 148);
+            label2.Location = new Point(71, 151);
             label2.Name = "label2";
             label2.Size = new Size(62, 28);
             label2.TabIndex = 23;
@@ -115,17 +117,18 @@
             // 
             // txtAuthor
             // 
-            txtAuthor.Location = new Point(181, 228);
+            txtAuthor.Location = new Point(181, 212);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(121, 23);
             txtAuthor.TabIndex = 31;
+            txtAuthor.KeyPress += TextUpDownAuthor_KeyPress;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(71, 228);
+            label4.Location = new Point(71, 212);
             label4.Name = "label4";
             label4.Size = new Size(73, 28);
             label4.TabIndex = 25;
@@ -133,17 +136,18 @@
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(181, 258);
+            txtEditorial.Location = new Point(181, 242);
             txtEditorial.Name = "txtEditorial";
             txtEditorial.Size = new Size(121, 23);
             txtEditorial.TabIndex = 30;
+            txtEditorial.KeyPress += TextUpDownEditorial_KeyPress;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.Transparent;
-            label7.Location = new Point(71, 337);
+            label7.Location = new Point(71, 302);
             label7.Name = "label7";
             label7.Size = new Size(66, 28);
             label7.TabIndex = 28;
@@ -155,13 +159,14 @@
             txtTomo.Name = "txtTomo";
             txtTomo.Size = new Size(121, 23);
             txtTomo.TabIndex = 29;
+            txtTomo.KeyPress += numericUpDownTomo_KeyPress;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(71, 260);
+            label5.Location = new Point(71, 244);
             label5.Name = "label5";
             label5.Size = new Size(85, 28);
             label5.TabIndex = 26;
@@ -200,7 +205,7 @@
             label8.TabIndex = 37;
             label8.Text = "Codigo";
             // 
-            // EditarAgreglos
+            // EditarListas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -222,7 +227,7 @@
             Controls.Add(txtTomo);
             Controls.Add(label5);
             Controls.Add(label3);
-            Name = "EditarAgreglos";
+            Name = "EditarListas";
             Text = "EditarAgreglos";
             Load += EditarAgreglos_Load;
             ResumeLayout(false);

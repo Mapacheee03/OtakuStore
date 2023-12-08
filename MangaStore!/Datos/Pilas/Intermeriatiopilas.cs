@@ -42,9 +42,9 @@ namespace MangaStore_.Datos.Pilas
             _pila.ActualizarDatos(manga);
         }
 
-        public void EliminarDatos(int id)
-        {
-            _pila.EliminarDatos(id);
-        }
+        //public void EliminarDatos(int id)
+        //{
+        //    _pila.EliminarDatos(id);
+        //}
     }
 }

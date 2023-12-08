@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pilas));
             panel1 = new Panel();
+            btnEliminar = new Button();
             dtgvMangas = new DataGridView();
             Manga_Id = new DataGridViewTextBoxColumn();
             Manga_Titulo = new DataGridViewTextBoxColumn();
@@ -41,7 +41,6 @@
             Manga_Genero = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             Btn_Editar = new DataGridViewButtonColumn();
-            Eliminar = new DataGridViewButtonColumn();
             btnCerrarForm = new Button();
             btnAgregar = new Button();
             txtTitulo = new TextBox();
@@ -64,6 +63,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(32, 30, 45);
+            panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(dtgvMangas);
             panel1.Controls.Add(btnCerrarForm);
             panel1.Controls.Add(btnAgregar);
@@ -86,10 +86,23 @@
             panel1.Size = new Size(1370, 618);
             panel1.TabIndex = 22;
             // 
+            // btnEliminar
+            // 
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEliminar.ForeColor = SystemColors.Control;
+            btnEliminar.Location = new Point(129, 408);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(95, 33);
+            btnEliminar.TabIndex = 24;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
+            // 
             // dtgvMangas
             // 
             dtgvMangas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Manga_Id, Manga_Titulo, Manga_Tomo, Manga_Author, Manga_Editorial, Manga_Genero, dataGridViewTextBoxColumn1, Btn_Editar, Eliminar });
+            dtgvMangas.Columns.AddRange(new DataGridViewColumn[] { Manga_Id, Manga_Titulo, Manga_Tomo, Manga_Author, Manga_Editorial, Manga_Genero, dataGridViewTextBoxColumn1, Btn_Editar });
             dtgvMangas.Location = new Point(241, 32);
             dtgvMangas.Name = "dtgvMangas";
             dtgvMangas.RowTemplate.Height = 25;
@@ -164,23 +177,6 @@
             Btn_Editar.Text = "Editar";
             Btn_Editar.UseColumnTextForButtonValue = true;
             // 
-            // Eliminar
-            // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.DarkRed;
-            dataGridViewCellStyle2.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle2.NullValue = "Eliminar";
-            dataGridViewCellStyle2.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle2;
-            Eliminar.Frozen = true;
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Name = "Eliminar";
-            Eliminar.ReadOnly = true;
-            Eliminar.Resizable = DataGridViewTriState.True;
-            Eliminar.SortMode = DataGridViewColumnSortMode.Automatic;
-            Eliminar.ToolTipText = "Eliminar";
-            // 
             // btnCerrarForm
             // 
             btnCerrarForm.BackColor = Color.FromArgb(32, 30, 45);
@@ -215,6 +211,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(121, 23);
             txtTitulo.TabIndex = 19;
+            txtTitulo.KeyPress += TextUpDownTitulo_KeyPress;
             // 
             // label1
             // 
@@ -270,6 +267,7 @@
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(121, 23);
             txtAuthor.TabIndex = 15;
+            txtAuthor.KeyPress += TextUpDownAuthor_KeyPress;
             // 
             // label4
             // 
@@ -288,6 +286,7 @@
             txtEditorial.Name = "txtEditorial";
             txtEditorial.Size = new Size(121, 23);
             txtEditorial.TabIndex = 14;
+            txtEditorial.KeyPress += TextUpDownEditorial_KeyPress;
             // 
             // label7
             // 
@@ -349,15 +348,6 @@
         private DataGridView dataGridView1;
         private Panel panel1;
         private DataGridView dtgvMangas;
-        private DataGridViewTextBoxColumn Manga_Id;
-        private DataGridViewTextBoxColumn Manga_Titulo;
-        private DataGridViewTextBoxColumn Manga_Tomo;
-        private DataGridViewTextBoxColumn Manga_Author;
-        private DataGridViewTextBoxColumn Manga_Editorial;
-        private DataGridViewTextBoxColumn Manga_Genero;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewButtonColumn Btn_Editar;
-        private DataGridViewButtonColumn Eliminar;
         private Button btnCerrarForm;
         private Button btnAgregar;
         public TextBox txtTitulo;
@@ -373,5 +363,14 @@
         public TextBox txtTomo;
         private Label label5;
         private Label label3;
+        private DataGridViewTextBoxColumn Manga_Id;
+        private DataGridViewTextBoxColumn Manga_Titulo;
+        private DataGridViewTextBoxColumn Manga_Tomo;
+        private DataGridViewTextBoxColumn Manga_Author;
+        private DataGridViewTextBoxColumn Manga_Editorial;
+        private DataGridViewTextBoxColumn Manga_Genero;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewButtonColumn Btn_Editar;
+        private Button btnEliminar;
     }
 }

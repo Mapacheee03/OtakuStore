@@ -94,36 +94,29 @@ namespace MangaStore_.Datos.Colas
         }
         public void ActualizarDatos(Mangas mangas)
         {
-            for (int i = _frente; i <= _fin; i++)
+            Cola colaTemp = new Cola();
+
+            while (!ColaVacia())
             {
-                if (_listaCola[i] != null && _listaCola[i].Id == mangas.Id)
+                Mangas elemento = Desencolar();
+                if (elemento.Id == mangas.Id)
                 {
-                    _listaCola[i].Titulo = mangas.Titulo;
-                    _listaCola[i].Tomo = mangas.Tomo;
-                    _listaCola[i].Author = mangas.Author;
-                    _listaCola[i].Editorial = mangas.Editorial;
-                    _listaCola[i].Genereo = mangas.Genereo;
-                    _listaCola[i].Precio = mangas.Precio;
-                    break;
+                    elemento.Titulo = mangas.Titulo;
+                    elemento.Tomo = mangas.Tomo;
+                    elemento.Author = mangas.Author;
+                    elemento.Editorial = mangas.Editorial;
+                    elemento.Genereo = mangas.Genereo;
+                    elemento.Precio = mangas.Precio;
                 }
+                colaTemp.Encolar(elemento);
+            }
+
+            while (!colaTemp.ColaVacia())
+            {
+                Encolar(colaTemp.Desencolar());
             }
         }
 
-        public void EliminarDatos(int id)
-        {
-            for (int i = _frente; i <= _fin; i++)
-            {
-                if (_listaCola[i] != null && id == _listaCola[i].Id)
-                {
-                    for (int j = i; j < _fin; j++)
-                        _listaCola[j] = _listaCola[j + 1];
-
-                    _listaCola[_fin] = null;
-                    _fin--;
-                    break;
-                }
-            }
-        }
         public Mangas[] ImprimirCola()
         {
             if (!ColaVacia())

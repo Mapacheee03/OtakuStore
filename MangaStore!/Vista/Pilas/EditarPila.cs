@@ -52,5 +52,54 @@ namespace MangaStore_.Vista.Pilas
 
             this.Close();
         }
+        private void txtboxnumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números, coma (,) o punto (.)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // Permitir solo un punto o coma decimal
+            if ((e.KeyChar == ',' || e.KeyChar == '.') && ((TextBox)sender).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void numericUpDownTomo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo números y teclas de control (por ejemplo, borrar, retroceso)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void TextUpDownTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextUpDownEditorial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

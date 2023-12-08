@@ -41,9 +41,9 @@ namespace MangaStore_.Datos.Colas
             _cola.ActualizarDatos(manga);
         }
 
-        public void EliminarDatos(int id)
-        {
-            _cola.EliminarDatos(id);
-        }
+        //public void EliminarDatos(int id)
+        //{
+        //    _cola.EliminarDatos(id);
+        //}
     }
 }

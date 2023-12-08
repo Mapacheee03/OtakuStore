@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UTS-CDS\\Desktop\\Eloyt\\OtakuStore\\OtakuStore\\MangaStore!\\MangaStore!.csproj": {}
+    "C:\\Users\\Orlxndo\\Source\\Repos\\OtakuStore\\MangaStore!\\MangaStore!.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UTS-CDS\\Desktop\\Eloyt\\OtakuStore\\OtakuStore\\MangaStore!\\MangaStore!.csproj": {
+    "C:\\Users\\Orlxndo\\Source\\Repos\\OtakuStore\\MangaStore!\\MangaStore!.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UTS-CDS\\Desktop\\Eloyt\\OtakuStore\\OtakuStore\\MangaStore!\\MangaStore!.csproj",
+        "projectUniqueName": "C:\\Users\\Orlxndo\\Source\\Repos\\OtakuStore\\MangaStore!\\MangaStore!.csproj",
         "projectName": "MangaStore!",
-        "projectPath": "C:\\Users\\UTS-CDS\\Desktop\\Eloyt\\OtakuStore\\OtakuStore\\MangaStore!\\MangaStore!.csproj",
-        "packagesPath": "C:\\Users\\UTS-CDS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UTS-CDS\\Desktop\\Eloyt\\OtakuStore\\OtakuStore\\MangaStore!\\obj\\",
+        "projectPath": "C:\\Users\\Orlxndo\\Source\\Repos\\OtakuStore\\MangaStore!\\MangaStore!.csproj",
+        "packagesPath": "C:\\Users\\Orlxndo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Orlxndo\\Source\\Repos\\OtakuStore\\MangaStore!\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\UTS-CDS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Orlxndo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
