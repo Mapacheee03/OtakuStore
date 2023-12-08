@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Areglos));
             label1 = new Label();
             label2 = new Label();
@@ -71,7 +71,6 @@
             label1.Size = new Size(227, 37);
             label1.TabIndex = 0;
             label1.Text = "Registrar Arreglos";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -127,7 +126,6 @@
             label6.Size = new Size(76, 28);
             label6.TabIndex = 5;
             label6.Text = "Genero";
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -139,7 +137,6 @@
             label7.Size = new Size(66, 28);
             label7.TabIndex = 6;
             label7.Text = "Precio";
-            label7.Click += label7_Click;
             // 
             // txtTomo
             // 
@@ -178,7 +175,6 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(121, 23);
             txtPrecio.TabIndex = 17;
-            txtPrecio.TextChanged += txtPrecio_TextChanged;
             txtPrecio.KeyPress += txtboxnumeros_KeyPress;
             // 
             // txtTitulo
@@ -223,6 +219,7 @@
             dtgvMangas.RowTemplate.Height = 25;
             dtgvMangas.Size = new Size(1086, 535);
             dtgvMangas.TabIndex = 22;
+            dtgvMangas.CellContentClick += dgv_CeldaClick;
             // 
             // Manga_Id
             // 
@@ -276,13 +273,13 @@
             // Btn_Editar
             // 
             Btn_Editar.DataPropertyName = "Editar";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.Yellow;
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle5.NullValue = "Editar";
-            dataGridViewCellStyle5.SelectionBackColor = Color.Fuchsia;
-            dataGridViewCellStyle5.SelectionForeColor = Color.FromArgb(64, 0, 64);
-            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = Color.Yellow;
+            dataGridViewCellStyle11.ForeColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle11.NullValue = "Editar";
+            dataGridViewCellStyle11.SelectionBackColor = Color.Fuchsia;
+            dataGridViewCellStyle11.SelectionForeColor = Color.FromArgb(64, 0, 64);
+            Btn_Editar.DefaultCellStyle = dataGridViewCellStyle11;
             Btn_Editar.Frozen = true;
             Btn_Editar.HeaderText = "Editar";
             Btn_Editar.Name = "Btn_Editar";
@@ -293,13 +290,13 @@
             // 
             // Eliminar
             // 
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = Color.DarkRed;
-            dataGridViewCellStyle6.ForeColor = Color.BlanchedAlmond;
-            dataGridViewCellStyle6.NullValue = "Eliminar";
-            dataGridViewCellStyle6.SelectionBackColor = Color.Red;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Blue;
-            Eliminar.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = Color.DarkRed;
+            dataGridViewCellStyle12.ForeColor = Color.BlanchedAlmond;
+            dataGridViewCellStyle12.NullValue = "Eliminar";
+            dataGridViewCellStyle12.SelectionBackColor = Color.Red;
+            dataGridViewCellStyle12.SelectionForeColor = Color.Blue;
+            Eliminar.DefaultCellStyle = dataGridViewCellStyle12;
             Eliminar.Frozen = true;
             Eliminar.HeaderText = "Eliminar";
             Eliminar.Name = "Eliminar";
@@ -321,6 +318,7 @@
             btnCerrarForm.Size = new Size(31, 47);
             btnCerrarForm.TabIndex = 21;
             btnCerrarForm.UseVisualStyleBackColor = false;
+            btnCerrarForm.Click += btnCerrarForm_Click;
             // 
             // btnAgregar
             // 
@@ -333,6 +331,7 @@
             btnAgregar.TabIndex = 20;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // Areglos
             // 
@@ -342,6 +341,7 @@
             Controls.Add(panel1);
             Name = "Areglos";
             Text = "Form2";
+            Load += Areglos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvMangas).EndInit();

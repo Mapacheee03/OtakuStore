@@ -19,7 +19,7 @@ namespace MangaStore_
     public partial class Areglos : Form
     {
         ArregloLogica _ArregloLogica = ArregloLogica.Instancia;
-
+        private int X=0;
         // Intermedio _Intermedio = new Intermedio();
         public Areglos()
         {
@@ -70,20 +70,11 @@ namespace MangaStore_
 
             try
             {
-                Mangas[] manga1 = _ArregloLogica.ObtenerAreglo();
 
-                int x = 1;
-                if (manga1 != null)
-                {
-                    for (int i = 0; i < manga1.Length && manga1[i] != null; i++)
-                    {
-                        x = ObtenerNuevoId();
-                    }
-                }
-
+                X++;
                 Mangas manga = new Mangas
                 {
-                    Id = x,
+                    Id = X,
                     Titulo = txtTitulo.Text,
                     Tomo = tomo,
                     Author = txtAuthor.Text,
@@ -92,7 +83,9 @@ namespace MangaStore_
                     Precio = precio,
                 };
 
-                _ArregloLogica.insertarAreglos(manga);
+                _ArregloLogica.insertarfinal(manga);
+                _ArregloLogica.insertarinicio(manga);
+                _ArregloLogica.InsertarEnMedio(manga);
 
 
                 RefrescarLista();
@@ -218,26 +211,6 @@ namespace MangaStore_
             }
 
 
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
 
         }
 
